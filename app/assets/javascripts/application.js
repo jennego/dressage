@@ -16,3 +16,12 @@
 //= require rails-ujs
 //= require activestorage
 //= require_tree .
+
+function on() {
+  document.getElementById("overlay").style.display = "block";
+  console.log("I work")
+}
+
+function off() {
+  document.getElementById("overlay").style.display = "none";
+}
