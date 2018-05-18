@@ -1,27 +1,6 @@
-# README
+# Dressage Tests
 
-A mobile-friendly dressage test directory. 
+A mobile-friendly dressage test directory. All tests copyright of their respective copyright holders.
 Mobile app planned for future.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Ruby on Rails with postgresql.
