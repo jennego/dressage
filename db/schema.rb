@@ -29,10 +29,10 @@ ActiveRecord::Schema.define(version: 2018_06_05_045052) do
   create_table "moves", force: :cascade do |t|
     t.string "letter"
     t.string "move"
-    t.bigint "dressage_tests_id"
+    t.bigint "dressage_test_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["dressage_tests_id"], name: "index_moves_on_dressage_tests_id"
+    t.index ["dressage_test_id"], name: "index_moves_on_dressage_test_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -52,5 +52,5 @@ ActiveRecord::Schema.define(version: 2018_06_05_045052) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "moves", "dressage_tests", column: "dressage_tests_id"
+  add_foreign_key "moves", "dressage_tests"
 end

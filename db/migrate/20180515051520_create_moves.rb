@@ -3,7 +3,7 @@ class CreateMoves < ActiveRecord::Migration[5.2]
     create_table :moves do |t|
       t.string :letter
       t.string :move
-      t.references :dressage_tests, foreign_key: true, index: true
+      t.references :dressage_test, foreign_key: true, index: true
 
       t.timestamps
     end
