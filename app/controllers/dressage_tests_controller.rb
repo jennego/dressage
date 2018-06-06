@@ -19,7 +19,7 @@ end
 
 
 def test_params
-  params.require(:dressage_test).permit(:move, :letter, :notes, :org_name, :level, :year)
+  params.require(:dressage_test).permit(:notes, :org_name, :level, :year, :subtitle, move_attributes: [:id, :letter, :move, :_destroy])
 end
 
 end

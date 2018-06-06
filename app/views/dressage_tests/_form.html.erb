@@ -6,16 +6,15 @@
 
 <p> Enter test </p>
 
-<%= f.fields_for @moves do |m| %>
-<div class="row">
-<div class="col">
-  <%= m.input :letter %>
+
+<%= f.fields_for @moves do |f| %>
+    <%= render 'move_fields', :f => f %>
+     <% end %>
+
+<div class='links'>
+  <%= link_to_add_association 'add move', f, :moves %>
 </div>
-<div class="col">
-  <%= m.input :move %>
-</div>
-</div>
-<% end %>
+
 
 
 <%= f.submit class: 'btn btn-primary' %>
