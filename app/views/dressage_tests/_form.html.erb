@@ -7,7 +7,7 @@
 <p> Enter test </p>
 
 
-<%= f.fields_for @moves do |f| %>
+<%= f.fields_for :moves do |f| %>
     <%= render 'move_fields', :f => f %>
      <% end %>
 
