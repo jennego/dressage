@@ -13,4 +13,5 @@ To do
 - add creation forms
 - add data (dressage tests)
 - add search
-- create api 
+- create api
+- add association to similar tests 
