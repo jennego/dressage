@@ -1,10 +1,14 @@
 class DressageTestsController < ApplicationController
 def index
+  if params[:term]
+  @dressage_tests = DressageTest.search_by_test(params[:term]).with_pg_search_highlight
+  else
+  @dressage_tests = DressageTest.all
+  end
 end
 
 def new
   @dressage_test = DressageTest.new
-
 end
 
 def edit

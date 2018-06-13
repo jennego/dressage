@@ -40,6 +40,9 @@ gem 'simple_form'
 gem 'devise'
 gem 'friendly_id'
 gem "cocoon"
+gem 'pg_search'
+gem "select2-rails"
+gem 'underscore-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

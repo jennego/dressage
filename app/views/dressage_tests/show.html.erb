@@ -1,8 +1,8 @@
-<%= @dressage_test.year %> <%= @dressage_test.org_name %> <%= @dressage_test.name %>
+<h3> <%= @dressage_test.org_name %> <%= @dressage_test.year %>
+<%= @dressage_test.level %> <%= @dressage_test.name %> </h3>
 
-<p> Dressaage tests details </p>
 
-<p> movmeents </p>
+
 <table class="table">
   <thead>
     <tr>
@@ -11,13 +11,10 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>A</td>
-      <td>X</td>
+      <% @dressage_test.moves.each do |d| %>
+      <tr>
+      <td><%= d.letter %> </td>
+      <td> <%= d.move %> </td>
     </tr>
-    <tr>
-      <td>Enter</td>
-      <td>Halt</td>
-    </tr>
+      <% end %>
   </tbody>
-</table>

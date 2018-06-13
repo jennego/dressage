@@ -1,3 +1,27 @@
 Index page of dressage tests.
 
 [search]
+
+<%= form_tag dressage_tests_path, method: :get do %>
+  <%= text_field_tag 'term', params[:term], placeholder: "Search for a test" %>
+  <%= submit_tag 'Search!' %>
+<% end %>
+
+
+<% @dressage_tests.each do |d| %>
+
+
+<% if d.respond_to?(:pg_search_highlight) %>
+<%= d.pg_search_highlight.html_safe %>
+<% else %>
+
+<ul>
+  <li>
+    <%= link_to (dressage_test_path(d)) do %>
+  <%= d.year %> <%= d.org_name %> <%= d.level %> <% d.name %>
+  <% end %>
+</li>
+</ul>
+<% end %>
+
+<% end %>
