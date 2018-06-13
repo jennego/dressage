@@ -1,10 +1,6 @@
-Index page of dressage tests.
 
-[search]
-
-<%= form_tag dressage_tests_path, method: :get do %>
-  <%= text_field_tag 'term', params[:term], placeholder: "Search for a test" %>
-  <%= submit_tag 'Search!' %>
+<%= form_tag dressage_tests_path, class: "form-inline", method: :get do %>
+  <%= text_field_tag 'term', params[:term], placeholder: "Search for a test", class: "form-control col-4" %> <%= submit_tag 'Search', class: "btn btn-primary" %>
 <% end %>
 
 
@@ -18,7 +14,7 @@ Index page of dressage tests.
 <ul>
   <li>
     <%= link_to (dressage_test_path(d)) do %>
-  <%= d.year %> <%= d.org_name %> <%= d.level %> <% d.name %>
+  <%= d.year %> <%= d.org_name %> <%= d.level %> <%= d.name %>
   <% end %>
 </li>
 </ul>
