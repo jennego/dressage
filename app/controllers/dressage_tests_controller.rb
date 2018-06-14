@@ -1,9 +1,13 @@
 class DressageTestsController < ApplicationController
 def index
-  if params[:term]
-  @dressage_tests = DressageTest.search_by_test(params[:term]).with_pg_search_highlight
-  else
-  @dressage_tests = DressageTest.all
+  respond_to do |format|
+    if params[:term]
+      @dressage_tests = DressageTest.search_by_test(params[:term]).with_pg_search_highlight
+    else
+      @dressage_tests = DressageTest.all
+    end
+  format.json
+  format.html
   end
 end
 

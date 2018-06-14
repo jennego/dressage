@@ -11,8 +11,8 @@
 // about supported directives.
 //
 //= require jquery3
-//= require underscore
 //= require select2
+//= require underscore
 //= require cocoon
 //= require popper
 //= require bootstrap-sprockets
