@@ -11,11 +11,11 @@
 // about supported directives.
 //
 
+//= require jquery3
+
 //= require jquery_ujs
 //= require jquery-ui/widgets/autocomplete
 //= require autocomplete-rails
-
-//= require jquery3
 //= require select2
 //= require underscore
 //= require cocoon
@@ -29,9 +29,16 @@ $(document).ready(function() {
 
 $("#d").select2({
    ajax: {
-    url: 'https://cat-fact.herokuapp.com/facts',
-    dataType: 'json'
-    // Additional AJAX parameters go here; see the end of this chapter for the full code of this example
+    url: 'http://localhost:3000/dressage_tests.json',
+    dataType: 'json',
+    processResults: function(data) {
+      return {
+        id: data.id,
+        year: data.year,
+        name: data.name,
+        level: data.level
+      }
+    }
   }
 });
 
