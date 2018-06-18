@@ -10,6 +10,11 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+
+//= require jquery_ujs
+//= require jquery-ui/widgets/autocomplete
+//= require autocomplete-rails
+
 //= require jquery3
 //= require select2
 //= require underscore
@@ -19,6 +24,24 @@
 //= require rails-ujs
 //= require activestorage
 //= require_tree .
+
+$(document).ready(function() {
+
+$("#d").select2({
+   ajax: {
+    url: 'https://cat-fact.herokuapp.com/facts',
+    dataType: 'json'
+    // Additional AJAX parameters go here; see the end of this chapter for the full code of this example
+  }
+});
+
+  // $("input[data-autocomplete]").each ->
+  //   url = $(this).data('autocomplete')
+  //   $(this).autocomplete
+  //     source: url
+  //
+
+    })
 
 function on() {
   document.getElementById("overlay").style.display = "block";

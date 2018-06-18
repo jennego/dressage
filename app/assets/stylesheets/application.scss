@@ -11,6 +11,8 @@
  * It is generally better to create a new file per style scope.
  *
  *= require select2-bootstrap
+ *= require jquery-ui
+ *= require jquery-ui/autocomplete
  *= require_tree .
  *= require_self
  */
@@ -44,4 +46,12 @@
 
 #content img {
   width: 300px;
+}
+
+.letter {
+  font-size: 20px;
+  font-weight: bold;
+  border: solid #000 1px;
+  padding: 5px 10px;
+  display:inline-block;
 }

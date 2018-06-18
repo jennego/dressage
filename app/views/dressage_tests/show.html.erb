@@ -3,17 +3,18 @@
 
 
 
+
 <table class="table">
   <thead>
     <tr>
-      <th scope="col">Letter</th>
+      <th scope="col"> Letter</th>
       <th scope="col">Movement</th>
     </tr>
   </thead>
   <tbody>
       <% @dressage_test.moves.each do |d| %>
       <tr>
-      <td><%= d.letter %> </td>
+      <td> <div class="letter"><%= d.letter %> </td>
       <td> <%= d.move %> </td>
     </tr>
       <% end %>

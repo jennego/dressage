@@ -1,6 +1,10 @@
+<%= form_tag dressage_tests_path, method: :get do %>
+  <%= autocomplete_field_tag 'address', '', autocomplete_dressage_tests_name_dressage_tests_path , :size => 75 %>
+<% end %>
+
 <%= form_tag '' do %>
-  <%= label_tag 'to' %>
-  <%= select_tag 'to', nil, style: 'width: 100%' %>
+  <%= label_tag 'search' %>
+  <%= select_tag 'd', nil, style: 'width: 100%' %>
 <% end %>
 
 <%= form_tag dressage_tests_path, class: "form-inline", method: :get do %>

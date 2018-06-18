@@ -1,4 +1,6 @@
 class DressageTestsController < ApplicationController
+  autocomplete :dressage_tests, :name, :extra_data => [:year, :level, :org_name]
+
 def index
   respond_to do |format|
     if params[:term]
@@ -32,6 +34,9 @@ def show
 end
 
 
+
+
+
 def test_params
   params.require(:dressage_test).permit(:notes, :name, :org_name, :level, :year, :subtitle, moves_attributes: [:id, :letter, :move, :_destroy])
 end
@@ -39,5 +44,6 @@ end
   def find_test
     @dressage_test = DressageTest.find params[:id]
   end
+
 
 end
