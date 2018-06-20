@@ -82,7 +82,7 @@ wtD_test = DressageTest.create({
   { letter: 'M E', move: 'Change rein on short diagonal'},
   { letter: 'E F', move: 'Change rein on short diagonal'},
   { letter: 'A', move: 'Turn down centre line'},
-  { letter: 'G', move: 'Halt. Salute.'},
+  { letter: 'G', move: 'Halt. Salute.'}
  ]
 })
 
