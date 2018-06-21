@@ -16,4 +16,5 @@ To do
 - create api - TO DO
 - add association to similar tests  - TO DO
 - put dressage arena in a more useful spot - TO DO
-- move root to dressage tests index - Donaue
+- move root to dressage tests index - Done
+- have dressage arena on a slide out or something 
