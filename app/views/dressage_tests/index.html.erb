@@ -1,9 +1,10 @@
-
+<div class="container">
 
 <%= form_tag dressage_tests_path, class: "form-inline", method: :get do %>
   <%= text_field_tag 'term', params[:term], placeholder: "Search for a test", class: "form-control col-4" %> <%= submit_tag 'Search', class: "btn btn-primary" %>
 <% end %>
 
+<div class="test-list">
 
 <% @dressage_tests.each do |d| %>
 
@@ -22,3 +23,6 @@
 <% end %>
 
 <% end %>
+
+</div>
+</div>

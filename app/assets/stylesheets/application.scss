@@ -55,3 +55,18 @@
   padding: 5px 10px;
   display:inline-block;
 }
+
+body.dressage_tests.index {
+  background-image: image-url('dressage_arena_stock_11_by_luda_stock-d3llrkh.jpg');
+}
+
+.test-list {
+  margin-top: 1rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 5px;
+}
+
+ .test-list ul li a {
+  color: #fff;
+  list-style-type: none;
+}
