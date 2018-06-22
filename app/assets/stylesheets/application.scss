@@ -60,10 +60,11 @@ body.dressage_tests.index {
   background-image: image-url('dressage_arena_stock_11_by_luda_stock-d3llrkh.jpg');
 }
 
-.test-list {
+.test-list, .test-list a {
   margin-top: 1rem;
   background-color: rgba(0, 0, 0, 0.3);
   padding: 5px;
+  color: #fff;
 }
 
  .test-list ul li a {
