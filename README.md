@@ -17,4 +17,5 @@ To do
 - add association to similar tests  - TO DO
 - put dressage arena in a more useful spot - TO DO
 - move root to dressage tests index - Done
-- have dressage arena on a slide out or something 
+- have dressage arena on a slide out or something
+- figure out how to group by level and display only current tests on index
