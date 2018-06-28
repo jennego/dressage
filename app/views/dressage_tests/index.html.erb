@@ -17,10 +17,13 @@
 
 
 <% if d.respond_to?(:pg_search_highlight) %>
-
+<ul>
+<li>
     <%= link_to (dressage_test_path(d)) do %>
   <%= d.pg_search_highlight.html_safe %>
   <% end %>
+</li>
+</ul>
 
 <% else %>
 

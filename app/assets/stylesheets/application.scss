@@ -60,7 +60,7 @@ body.dressage_tests.index {
   background-image: image-url('dressage_arena_stock_11_by_luda_stock-d3llrkh.jpg');
 }
 
-.test-list, .test-list a {
+.test-list {
   margin-top: 1rem;
   background-color: rgba(0, 0, 0, 0.3);
   padding: 5px;
@@ -68,9 +68,10 @@ body.dressage_tests.index {
   font-size: 20px;
 }
 
- .test-list ul li a {
+ .test-list ul li a, .test-list li {
   color: #fff;
   list-style-type: none;
+  margin-left: -15px;
 }
 
 .search-form {
