@@ -1,21 +1,31 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-6">
+
 <h3> <%= @dressage_test.org_name %> <%= @dressage_test.year %>
 <%= @dressage_test.level %> <%= @dressage_test.name %> </h3>
+      <a class="text-primary" href="#" onclick="on()"> Toggle Arena Diagram </a>
 
-
+<p><%= @dressage_test&.note %> </p>
 
 
 <table class="table">
   <thead>
     <tr>
-      <th scope="col"> Letter</th>
+      <th scope="col" class="letter-col"> Letter</th>
       <th scope="col">Movement</th>
     </tr>
   </thead>
   <tbody>
       <% @dressage_test.moves.each do |d| %>
       <tr>
-      <td> <div class="letter"><%= d.letter %> </td>
-      <td> <%= d.move %> </td>
+      <td class="letter-col"> <div class="letter"><%= d.letter %> </td>
+      <td class="move-col"> <%= d.move %> </td>
     </tr>
       <% end %>
   </tbody>
+</div>
+ <div class="col">
+ </div>
+</div>
+</div>
