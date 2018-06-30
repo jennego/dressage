@@ -14,7 +14,8 @@ To do
 - add data (dressage tests) - seeds still need to be created
 - add search - auto complete still to do
 - create api - TO DO
-- add association to similar tests  - TO DO
+- add association to similar tests  - TO DO - one test to many lists of tests?
+- add association to official links - TO DO - one test to many links 
 - put dressage arena in a more useful spot - TO DO
 - move root to dressage tests index - Done
 - have dressage arena on a slide out or something
