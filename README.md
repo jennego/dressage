@@ -16,7 +16,7 @@ To do
 - create api - TO DO
 - add association to similar tests  - TO DO - one test to many lists of tests?
 - add association to official links - TO DO - one test to many links
-- put dressage arena in a more useful spot - TO DO
+- put dressage arena in a more useful spot - done (now maybe add animation?)
 - move root to dressage tests index - Done
 - have dressage arena on a slide out or something
 - figure out how to group by level and display only current tests on index
