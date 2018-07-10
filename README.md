@@ -20,3 +20,4 @@ To do
 - move root to dressage tests index - Done
 - have dressage arena on a slide out or something
 - figure out how to group by level and display only current tests on index
+- figure out auto complete (low priority - maybe wait for SPA?)
