@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_06_042431) do
+ActiveRecord::Schema.define(version: 2018_07_10_041113) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,15 @@ ActiveRecord::Schema.define(version: 2018_06_06_042431) do
     t.datetime "updated_at", null: false
     t.text "note"
     t.string "subtitle"
+  end
+
+  create_table "links", force: :cascade do |t|
+    t.string "url"
+    t.string "linkname"
+    t.bigint "dressage_test_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["dressage_test_id"], name: "index_links_on_dressage_test_id"
   end
 
   create_table "moves", force: :cascade do |t|
@@ -53,5 +62,6 @@ ActiveRecord::Schema.define(version: 2018_06_06_042431) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "links", "dressage_tests"
   add_foreign_key "moves", "dressage_tests"
 end
