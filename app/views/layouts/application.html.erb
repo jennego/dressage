@@ -28,7 +28,7 @@
         <a class="nav-link" onclick="on()"> Arena </a>
       </li>
     </ul>
-    <ul>
+    <ul class="navbar-nav">
       <% if user_signed_in? %>
       <li> <%= link_to 'Sign Out', destroy_user_session_path, :method => :delete, class: 'nav-link text-white' %> </li>
       <% else %>
@@ -45,7 +45,7 @@
       click to close arena diagram
     </div>
     <div class="col-lg-6">
-     <img class="arena" src="https://upload.wikimedia.org/wikipedia/commons/1/15/Publicarena.svg" />
+     <img class="arena"  src="https://upload.wikimedia.org/wikipedia/commons/1/15/Publicarena.svg" />
     </div>
   </div>
 </div>
