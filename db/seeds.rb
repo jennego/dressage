@@ -87,3 +87,33 @@
 # })
 #
 # wtD_test.save!
+
+train1_test = DressageTest.create({
+  org_name: 'EC/USEF',
+  level: 'Training',
+  name: '1',
+  year: '2015',
+  moves_attributes:[
+  { letter: 'A', move: 'Enter at working trot'},
+  { letter: 'X', move: 'Halt. Salute and proceed at working trot'},
+  { letter: 'C', move: 'Track left'},
+  { letter: 'E', move: 'Cirle left 20m'},
+  { letter: 'A', move: 'Circle left 20m developing left lead canter in first quarter of circle '},
+  { letter: 'A-F-B', move: 'Working canter '},
+  { letter: 'Between B & M', move: 'Working trot'},
+  { letter: 'C', move: 'Medium walk'},
+  { letter: 'A', move: 'Working trot'},
+  { letter: 'E', move: 'Circle right 20m'},
+  { letter: 'C', move: 'Circle right 20m developing right lead canter in first quarter of circle '},
+  { letter: 'C-M-B', move: 'Working canter'},
+  { letter: 'Between B & F', move: 'Working trot'},
+  { letter: 'A', move: 'Down centerline'},
+  { letter: 'X', move: 'Halt, salute'}
+],
+links_attributes: [
+  {url:'https://www.equestrian.ca/cfs/files/resources/FiWsdXAtMHFv3zfpe/2015%20USEF%20Training%20Level%20Test%201.pdf' , linkname: 'Equestrian Canada PDF'},
+  {url:'https://files.usef.org/assets/5cAR_rj76S8/2015trainingleveltest1.pdf' , linkname: 'United States Equestrian Federation PDF'}
+]
+})
+
+train1_test.save!
