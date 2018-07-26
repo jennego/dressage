@@ -112,8 +112,45 @@ train1_test = DressageTest.create({
 ],
 links_attributes: [
   {url:'https://www.equestrian.ca/cfs/files/resources/FiWsdXAtMHFv3zfpe/2015%20USEF%20Training%20Level%20Test%201.pdf' , linkname: 'Equestrian Canada PDF'},
-  {url:'https://files.usef.org/assets/5cAR_rj76S8/2015trainingleveltest1.pdf' , linkname: 'United States Equestrian Federation PDF'}
+  {url:'https://www.usef.org/forms-pubs/9hJaeud1GVo/2015-training-level-test-1' , linkname: 'United States Equestrian Federation PDF'}
 ]
 })
 
 train1_test.save!
+
+train2_test = DressageTest.create({
+  org_name: 'EC/USEF',
+  level: 'Training',
+  name: '2',
+  year: '2015',
+  moves_attributes:[
+  { letter: 'A', move: 'Enter at working trot'},
+  { letter: 'X', move: 'Halt. Salute and proceed at working trot'},
+  { letter: 'C', move: 'Track right'},
+  { letter: 'B', move: 'Cirle right 20m'},
+  { letter: 'K-X-M', move: 'Change rein'},
+  { letter: 'Between C & H', move: 'Working canter left lead'},
+  { letter: 'E', move: 'Circle left 20m'},
+  { letter: 'Between E & K', move: 'Working trot'},
+  { letter: 'A', move: 'Circle left 20m rising trot, allowing the horse to stretch forward and downward '},
+  { letter: 'Before A', move: 'Shorten reins'},
+  { letter: 'A', move: 'Working trot'},
+  { letter: 'Between A & F', move: 'Medium Walk'},
+  { letter: 'F-E', move: 'Change rein, medium walk'},
+  { letter: 'E-M', move: 'Change rein, free walk'},
+  { letter: 'C', move: 'Working trot'},
+  { letter: 'E', move: 'Circle left 20m'},
+  { letter: 'F-X-H', move: 'Change rein'},
+  { letter: 'Between C & M', move: 'Working canter, right lead'},
+  { letter: 'B', move: 'Circle right 20m'},
+  { letter: 'Between B & F', move: 'Working trot'},
+  { letter: 'A', move: 'Down centerline'},
+  { letter: 'X', move: 'Halt, salute.'}
+],
+links_attributes: [
+  {url:'https://www.equestrian.ca/cfs/files/resources/Y2dimjRcGPN5quRj9/2015%20USEF%20Training%20Level%20Test%202.pdf' , linkname: 'Equestrian Canada PDF'},
+  {url:'https://www.usef.org/forms-pubs/IjbJzrNV42s/2015-training-level-test-2' , linkname: 'United States Equestrian Federation PDF'}
+]
+})
+
+train2_test.save!
