@@ -5,7 +5,7 @@ Mobile app planned for future. Dressage is an equestrian sport.
 
 Ruby on Rails with postgresql.
 
-EC/USEF tests only for now.
+EC/USEF tests only for now. Others may be added on request as well (send them to me and let me know where to find them!)
 
 To do
 
@@ -16,3 +16,4 @@ To do
 - figure out auto complete (low priority - maybe wait for SPA?)
 - add edit action
 - add destroy action
+- add contact form
