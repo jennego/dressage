@@ -7,14 +7,11 @@
     <%= submit_tag 'Search', class: "btn btn-primary submit-btn col-xs-2 ml-2" %>
   <% end %>
 
-<div class="col d-flex flex-column align-items-center">
 
-<div class="row">
 
-<div class="col test-list">
 
+  <div class="test-list">
 <% @dressage_tests.each do |d| %>
-
 
 <% if d.respond_to?(:pg_search_highlight) %>
 <ul>
@@ -24,9 +21,7 @@
   <% end %>
 </li>
 </ul>
-
 <% else %>
-
 <ul>
   <li>
     <%= link_to (dressage_test_path(d)) do %>
@@ -37,9 +32,43 @@
 <% end %>
 
 <% end %>
+</div>
 
+<div class="row">
+
+  <div class="col">
+
+    <div class="list-group">
+      <li class="list-group-item list-group-item bg-dark text-white"> Walk/Trot</li>
+      <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
+      <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
+      <a href="#" class="list-group-item list-group-item-action">Vestibulum at eros</a>
+    </div>
+  </div>
+
+  <div class="col">
+
+    <div class="list-group">
+      <li class="list-group-item list-group-item bg-dark text-white"> Training</li>
+      <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
+      <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
+      <a href="#" class="list-group-item list-group-item-action">Vestibulum at eros</a>
+    </div>
+
+  </div>
+
+  <div class="col">
+
+    <div class="list-group">
+      <li class="list-group-item list-group-item bg-dark text-white"> First Level</li>
+      <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
+      <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
+      <a href="#" class="list-group-item list-group-item-action">Vestibulum at eros</a>
+    </div>
+
+  </div>
+
+  </div>
 </div>
-</div>
-</div>
-</div>
+
 </div>
