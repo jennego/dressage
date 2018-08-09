@@ -15,6 +15,7 @@
 
 //= require jquery_ujs
 //= require jquery-ui/widgets/autocomplete
+//= require filterrific/filterrific-jquery
 //= require autocomplete-rails
 //= require select2
 //= require underscore

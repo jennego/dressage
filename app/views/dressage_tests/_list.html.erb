@@ -1,0 +1,24 @@
+
+<div id="filterrific_results" style="background-color:white">
+
+  <div>
+    <%= page_entries_info dressage_tests%>
+  </div>
+
+  <table>
+    <tr>
+      <th>Level</th>
+      <th>Year</th>
+      <th>Registered at</th>
+    </tr>
+    <% dressage_tests.each do |d| %>
+      <tr>
+        <td><%= d.level %></td>
+        <td><%= d.year %></td>
+        <td><%= d.created_at %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>
+
+<%= will_paginate dressage_tests %>
