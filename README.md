@@ -16,7 +16,7 @@ To do
 - add association to similar tests  - TO DO - one test to many lists of tests? Or search? Or filter?
 - figure out how to group by level and display only current tests on index
 - figure out auto complete (low priority - maybe wait for SPA?)
-- try filterific?
+- try filterific? - in progress with little success
 - add edit action
 - add destroy action
 - add contact form

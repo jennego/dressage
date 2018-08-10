@@ -1,5 +1,5 @@
 
-<div id="filterrific_results" style="background-color:white">
+<div id="results" style="background-color:white">
 
   <div>
     <%= page_entries_info dressage_tests%>
@@ -9,12 +9,14 @@
     <tr>
       <th>Level</th>
       <th>Year</th>
+      <th>Test</th>
       <th>Registered at</th>
     </tr>
     <% dressage_tests.each do |d| %>
       <tr>
         <td><%= d.level %></td>
         <td><%= d.year %></td>
+        <td><%= d.name %></td>
         <td><%= d.created_at %></td>
       </tr>
     <% end %>

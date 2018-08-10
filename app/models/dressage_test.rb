@@ -8,8 +8,8 @@ class DressageTest < ApplicationRecord
   filterrific(
     default_filter_params: { sorted_by: 'created_at_desc' },
     available_filters: [
-      :sorted_by,
-      :search_query
+      :search_query,
+      :sorted_by
     ]
   )
 
@@ -25,13 +25,12 @@ class DressageTest < ApplicationRecord
     # configure number of OR conditions for provision
     # of interpolation arguments. Adjust this if you
     # change the number of OR conditions.
-    num_or_conditions = 3
+    num_or_conditions = 2
     where(
       terms.map {
         or_clauses = [
           "LOWER(dressage_tests.year) LIKE ?",
-          "LOWER(dressage_tests.level) LIKE ?",
-          "LOWER(dressage_tests.name) LIKE ?"
+          "LOWER(dressage_tests.level) LIKE ?"
         ].join(' OR ')
         "(#{ or_clauses })"
       }.join(' AND '),

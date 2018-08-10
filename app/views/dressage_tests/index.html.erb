@@ -8,9 +8,6 @@
   <% end %>
 
 
-  <%# app/views/students/index.html.erb %>
-<h1>Dressage Test Sorting</h1>
-
 <%#
   Filterrific adds the `form_for_filterrific` view helper:
   * adds dom id 'filterrific_filter'
@@ -28,7 +25,12 @@
       class: 'filterrific-periodically-observed'
     ) %>
   </div>
-
+  <div>
+    Country
+  </div>
+  <div>
+    Registered after
+  </div>
   <div>
     Sorted by
     <%= f.select(:sorted_by, @filterrific.select_options[:sorted_by]) %>
@@ -40,6 +42,7 @@
     ) %>
   </div>
   <%# add an automated spinner to your form when the list is refreshed %>
+  <%= render_filterrific_spinner %>
 <% end %>
 
 <%= render(
