@@ -5,13 +5,12 @@ class Api::V1::DressageTestsController < Api::BaseController
     # this will render views/api/v1/index.json.jbuilder
   end
 
-#   def show
-#     question = Question.find params[:id]
-#     # Because we installed ActiveModel Serializer then the default behaviour is
-#     # to use the serializer instead of the default `to_json` method that comes
-#     # with ActiveRecrod
-#     render json: question
-#   end
+  def show
+    @test = DressageTest.find params[:id]
+    # Because we installed ActiveModel Serializer then the default behaviour is
+    # to use the serializer instead of the default `to_json` method that comes
+    # with ActiveRecrod
+  end
 
 #   def create
 #     question = Question.new question_params
