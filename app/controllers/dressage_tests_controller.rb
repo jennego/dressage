@@ -74,10 +74,26 @@ def index
 end
 
 def new
-  @dressage_test = DressageTest.new
+find_test
+end
+
+def update 
+find_test
+  if @dressage_test.update test_params
+    redirect_to @dressage_test
+  else
+    render :edit
+  end
+end
+
+def destroy
+  find_test
+  @dressage_test.destroy
+  redirect_to root_path
 end
 
 def edit
+  @dressage_test = DressageTest.find params[:id]
 end
 
 def create
