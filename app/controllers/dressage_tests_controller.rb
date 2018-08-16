@@ -48,7 +48,7 @@ def index
       },
       persistence_id: 'shared_key',
       default_filter_params: {},
-      available_filters: [:sorted_by],
+      # available_filters: [:sorted_by],
       sanitize_params: true
     ) or return
     # Get an ActiveRecord::Relation for all students that match the filter settings.
