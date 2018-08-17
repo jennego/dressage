@@ -154,3 +154,39 @@ links_attributes: [
 })
 
 train2_test.save!
+
+train3_test = DressageTest.create({
+  org_name: 'EC/USEF',
+  level: 'Training',
+  name: '3',
+  year: '2015',
+  moves_attributes:[
+  { letter: 'A', move: 'Enter at working trot'},
+  { letter: 'X', move: 'Halt. Salute and proceed at working trot'},
+  { letter: 'C', move: 'Track left'},
+  { letter: 'H-X-K', move: 'One loop'},
+  { letter: 'Between A & F', move: 'Working canter left lead'},
+  { letter: 'B', move: 'Circle left 20m'},
+  { letter: 'H-X-F', move: 'Change rein'},
+  { letter: 'X', move: 'Working trot'},
+  { letter: 'A', move: 'Medium walk '},
+  { letter: 'K-X-H', move: 'Free walk'},
+  { letter: 'H', move: 'Medium walk'},
+  { letter: 'C', move: 'Working trot'},
+  { letter: 'M-X-F', move: 'One loop'},
+  { letter: 'Between A & K', move: 'Working canter right lead'},
+  { letter: 'E', move: 'Circle right 20m'},
+  { letter: 'C', move: 'Working trot'},
+  { letter: 'B', move: 'Circle right 20m in rising trot allowing the horse to stretch forward '},
+  { letter: 'Before B', move: 'Shorten the reins'},
+  { letter: 'B', move: 'Working trot'},
+  { letter: 'A', move: 'Down centerline'},
+  { letter: 'X', move: 'Halt, salute.'}
+],
+links_attributes: [
+  {url:'https://www.equestrian.ca/cdn/storage/resources_v2/pF5S4yxTeFEu9xFYA/original/pF5S4yxTeFEu9xFYA.pdf' , linkname: 'Equestrian Canada PDF'},
+  {url:'https://www.usef.org/forms-pubs/OidZ9HCj3Fs/2015-training-level-test-3' , linkname: 'United States Equestrian Federation PDF'}
+]
+})
+
+train3_test.save!
