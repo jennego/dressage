@@ -29,8 +29,8 @@ class DressageTest < ApplicationRecord
     where(
       terms.map {
         or_clauses = [
-          "LOWER(dressage_tests.year) LIKE ?",
-          "LOWER(dressage_tests.level) LIKE ?"
+          "LOWER(dressage_tests.level) LIKE ?",
+          "LOWER(dressage_tests.name) LIKE ?"
         ].join(' OR ')
         "(#{ or_clauses })"
       }.join(' AND '),
