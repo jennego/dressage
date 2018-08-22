@@ -26,6 +26,12 @@
     ) %>
   </div>
   <div>
+    Country
+  </div>
+  <div>
+    Registered after
+  </div>
+  <div>
     Sorted by
     <%= f.select(:sorted_by, @filterrific.select_options[:sorted_by]) %>
   </div>
@@ -74,25 +80,39 @@
 <% end %>
 </div>
 
+
+
 <div class="row">
 
   <div class="col">
 
     <div class="list-group">
       <li class="list-group-item list-group-item bg-dark text-white"> Walk/Trot</li>
-      <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
-      <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
-      <a href="#" class="list-group-item list-group-item-action">Vestibulum at eros</a>
+     <% @dressage_tests.each do |d| %>
+      <% if d.level == "Walk/Trot"  %>
+        <%= link_to (dressage_test_path(d)), class: "list-group-item list-group-item-action" do %>
+        <%= d.year %> <%= d.org_name %> <%= d.level %> <%=d.name %> 
+        <% end %>
+     <% end %> 
+     <% end %>
+
     </div>
   </div>
 
   <div class="col">
 
     <div class="list-group">
+           <% @dressage_tests.each_with_index do |d, i| %>
+      <% if d.level == "Training"  %>
+      <% if i == 0 %>
       <li class="list-group-item list-group-item bg-dark text-white"> Training</li>
-      <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
-      <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
-      <a href="#" class="list-group-item list-group-item-action">Vestibulum at eros</a>
+      <% end %>
+        <%= link_to (dressage_test_path(d)), class: "list-group-item list-group-item-action" do %>
+        <%= d.year %> <%= d.org_name %> <%= d.level %> <%=d.name %> 
+        <% end %>
+     <% end %> 
+     <% end %>
+
     </div>
 
   </div>
@@ -109,6 +129,8 @@
   </div>
 
   </div>
+ 
 </div>
 
 </div>
+

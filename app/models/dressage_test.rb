@@ -16,7 +16,7 @@ class DressageTest < ApplicationRecord
    scope :search_query, lambda { |query|
     return nil  if query.blank?
     # condition query, parse into individual keywords
-    terms = query.downcase.split(/\s+/)
+    terms = query.to_s.downcase.split(/\s+/)
     # replace "*" with "%" for wildcard searches,
     # append '%', remove duplicate '%'s
     terms = terms.map { |e|
@@ -25,12 +25,13 @@ class DressageTest < ApplicationRecord
     # configure number of OR conditions for provision
     # of interpolation arguments. Adjust this if you
     # change the number of OR conditions.
-    num_or_conditions = 2
+    num_or_conditions = 3
     where(
       terms.map {
         or_clauses = [
           "LOWER(dressage_tests.level) LIKE ?",
-          "LOWER(dressage_tests.name) LIKE ?"
+          "LOWER(dressage_tests.name) LIKE ?",
+          "dressage_tests.year::TEXT LIKE ?",
         ].join(' OR ')
         "(#{ or_clauses })"
       }.join(' AND '),

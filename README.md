@@ -17,6 +17,7 @@ To do
 - figure out how to group by level and display only current tests on index
 - figure out auto complete (low priority - maybe wait for SPA?)
 - try filterific? - in progress with little success
-- add edit action
-- add destroy action
-- add contact form
+
+TO DO 
+Add submit button to filter
+Add filter by Level, Year, Org_Name 

@@ -14,11 +14,13 @@
     </tr>
     <% dressage_tests.each do |d| %>
       <tr>
+
         <td><%= d.level %></td>
         <td><%= d.year %></td>
-        <td><%= d.name %></td>
+        <td>    <%= link_to (dressage_test_path(d)) do %> <%= d.name %></td>
         <td><%= d.created_at %></td>
       </tr>
+    <% end %>
     <% end %>
   </table>
 </div>
