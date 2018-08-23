@@ -14,10 +14,17 @@ To do
 - add data (dressage tests) - several more seeds still need to be created
 - create api - TO DO
 - add association to similar tests  - TO DO - one test to many lists of tests? Or search? Or filter?
-- figure out how to group by level and display only current tests on index
 - figure out auto complete (low priority - maybe wait for SPA?)
 - try filterific? - in progress with little success
 
 TO DO 
 Add submit button to filter
 Add filter by Level, Year, Org_Name 
+
+Add to dressage_test model 
+- current / boonlean 
+- purpose / stringh
+- introduce / string 
+
+TEST API
+Secure API
