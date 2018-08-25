@@ -16,30 +16,26 @@
       * AJAX spinner while AJAX request is being processed
   * sets form_for options like :url, :method and input name prefix
 %>
-<%= form_for_filterrific @filterrific do |f| %>
-  <div>
+<%= form_for_filterrific @filterrific,  html: { id: 'filterrific-no-ajax-auto-submit' }, class:'filter-form'  do |f|%>
+  <div class="form-group">
     Search
     <%# give the search field the 'filterrific-periodically-observed' class for live updates %>
     <%= f.text_field(
       :search_query,
-      class: 'filterrific-periodically-observed'
+      class: 'form-control'
     ) %>
   </div>
-  <div>
-    Country
-  </div>
-  <div>
-    Registered after
-  </div>
-  <div>
+  <div class="form-group">
     Sorted by
-    <%= f.select(:sorted_by, @filterrific.select_options[:sorted_by]) %>
+    <%= f.select(:sorted_by, @filterrific.select_options[:sorted_by],{}, {:class => 'form-control'}) %>
   </div>
-  <div>
+  <div class="form-group">
     <%= link_to(
       'Reset filters',
       reset_filterrific_url,
+      class: "btn btn-danger" 
     ) %>
+  <%= f.submit 'Filter', class: "btn btn-primary" %>
   </div>
   <%# add an automated spinner to your form when the list is refreshed %>
   <%= render_filterrific_spinner %>
@@ -54,34 +50,6 @@
 
 
 
-
-
-  <div class="test-list">
-<% @dressage_tests.each do |d| %>
-
-<% if d.respond_to?(:pg_search_highlight) %>
-<ul>
-<li>
-    <%= link_to (dressage_test_path(d)) do %>
-  <%= d.pg_search_highlight.html_safe %>
-  <% end %>
-</li>
-</ul>
-<% else %>
-<ul>
-  <li>
-    <%= link_to (dressage_test_path(d)) do %>
-  <%= d.year %> <%= d.org_name %> <%= d.level %> <%= d.name %>
-  <% end %>
-</li>
-</ul>
-<% end %>
-
-<% end %>
-</div>
-
-
-
 <div class="row">
 
   <div class="col">
@@ -89,7 +57,9 @@
      <div class="list-group">
            <% @dressage_tests.each_with_index do |d, i| %>
       <% if d.level == "Walk/Trot"  %>
-      <% if i == 0 %>
+      <% if i == 4 %>
+      <%= puts i %>
+      <%= puts d %>
       <li class="list-group-item list-group-item bg-dark text-white"> Walk/Trot</li>
       <% end %>
         <%= link_to (dressage_test_path(d)), class: "list-group-item list-group-item-action" do %>
