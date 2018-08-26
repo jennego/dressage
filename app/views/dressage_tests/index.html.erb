@@ -30,6 +30,11 @@
     <%= f.select(:sorted_by, @filterrific.select_options[:sorted_by],{}, {:class => 'form-control'}) %>
   </div>
   <div class="form-group">
+      <%= f.select(
+      :filter_by_level,
+      @filterrific.select_options[:filter_by_level]) %>
+  </div>
+  <div class="form-group">
     <%= link_to(
       'Reset filters',
       reset_filterrific_url,
@@ -45,8 +50,6 @@
   partial: 'dressage_tests/list',
   locals: { dressage_tests: @dressage_tests }
 ) %>
-
-
 
 
 

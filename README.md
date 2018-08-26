@@ -20,6 +20,7 @@ To do
 TO DO 
 Add submit button to filter
 Add filter by Level, Year, Org_Name 
+Sort by Level, Year 
 
 Add to dressage_test model 
 - current / boonlean 

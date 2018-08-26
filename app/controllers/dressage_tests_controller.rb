@@ -44,7 +44,8 @@ def index
       DressageTest,
       params[:filterrific],
       select_options: {
-        sorted_by: DressageTest.options_for_sorted_by
+        sorted_by: DressageTest.options_for_sorted_by,
+        filter_by_level: DressageTest.options_for_filter_by_level
       },
       persistence_id: 'shared_key',
       default_filter_params: {},
