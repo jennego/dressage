@@ -7,20 +7,19 @@
 
   <table class='table'>
     <tr>
-      <th>Level</th>
       <th>Year</th>
+     <th> Org </th>
+      <th>Level</th>
       <th>Test</th>
-      <th>Registered at</th>
+
     </tr>
     <% dressage_tests.each do |d| %>
       <tr>
-
-        <td><%= d.level %></td>
-        <td><%= d.year %></td>
-        <td>    <%= link_to (dressage_test_path(d)) do %> <%= d.name %></td>
-        <td><%= d.created_at %></td>
+        <td> <%= link_to (dressage_test_path(d)) do %> <%= d.year %> <%end%> </td>
+        <td> <%= link_to (dressage_test_path(d)) do %> <%= d.org_name %> <% end %> </td>
+        <td>  <%= link_to (dressage_test_path(d)) do %> <%= d.level %> <% end %> </td>
+        <td>  <%= link_to (dressage_test_path(d)) do %> <%= d.name %> <% end %> </td>
       </tr>
-    <% end %>
     <% end %>
   </table>
 </div>

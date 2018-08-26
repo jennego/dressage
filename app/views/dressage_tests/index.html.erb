@@ -2,12 +2,6 @@
 
 <div class="container">
 
-  <%= form_tag dressage_tests_path, class: "search-form row form-group", method: :get do %>
-    <%= text_field_tag 'term', params[:term], placeholder: "Search for a test", class: "form-control col search-form" %>
-    <%= submit_tag 'Search', class: "btn btn-primary submit-btn col-xs-2 ml-2" %>
-  <% end %>
-
-
 <%#
   Filterrific adds the `form_for_filterrific` view helper:
   * adds dom id 'filterrific_filter'
@@ -16,7 +10,7 @@
       * AJAX spinner while AJAX request is being processed
   * sets form_for options like :url, :method and input name prefix
 %>
-<%= form_for_filterrific @filterrific,  html: { id: 'filterrific-no-ajax-auto-submit' }, class:'filter-form'  do |f|%>
+<%= form_for_filterrific @filterrific,  html: { id: 'filterrific-no-ajax-auto-submit' , class:'filter-form'}  do |f|%>
   <div class="form-group">
     Search
     <%# give the search field the 'filterrific-periodically-observed' class for live updates %>
@@ -30,6 +24,7 @@
     <%= f.select(:sorted_by, @filterrific.select_options[:sorted_by],{}, {:class => 'form-control'}) %>
   </div>
   <div class="form-group">
+  Level
       <%= f.select(
       :filter_by_level,
       @filterrific.select_options[:filter_by_level], 

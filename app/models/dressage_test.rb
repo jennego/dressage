@@ -6,7 +6,7 @@ class DressageTest < ApplicationRecord
   accepts_nested_attributes_for :links
 
   filterrific(
-    default_filter_params: { sorted_by: 'created_at_desc' },
+    default_filter_params: { sorted_by: 'level_' },
     available_filters: [
       :search_query,
       :sorted_by,
@@ -40,16 +40,34 @@ class DressageTest < ApplicationRecord
     )
   }
 
-  scope :sorted_by, lambda { |sort_option|
-    # extract the sort direction from the param value.
-    direction = (sort_option =~ /desc$/) ? 'desc' : 'asc'
-    case sort_option.to_s
-    when /^created_at_/
-      order("dressage_tests.created_at #{ direction }")
-    else
-      raise(ArgumentError, "Invalid sort option: #{ sort_option.inspect }")
-    end
-  }
+  
+scope :sorted_by, lambda { |sort_option|
+  # extract the sort direction from the param value.
+  direction = (sort_option =~ /desc$/) ? 'desc' : 'asc'
+  case sort_option.to_s
+  when /^created_at_/
+    # Simple sort on the created_at column.
+    # Make sure to include the table name to avoid ambiguous column names.
+    # Joining on other tables is quite common in Filterrific, and almost
+    # every ActiveRecord table has a 'created_at' column.
+    order("dressage_tests.created_at #{ direction }")
+  when /^name_/
+    # Simple sort on the name colums
+    order("LOWER(dressage_tests.name) #{ direction }")
+  when /^level_/
+   order("CASE Level
+        WHEN 'Walk/Trot' THEN 6
+        WHEN 'Training' THEN 5
+        WHEN 'First Level'THEN 4
+        WHEN 'Second Level' THEN 3 
+        WHEN 'Third Level' THEN 2
+        WHEN 'FOURTH LEVEL' THEN 1
+        ELSE 0
+       END DESC, name ASC")
+  else
+    raise(ArgumentError, "Invalid sort option: #{ sort_option.inspect }")
+  end
+}
 
   
 scope :filter_by_level, lambda {|level|
@@ -62,9 +80,11 @@ scope :filter_by_level, lambda {|level|
   def self.options_for_sorted_by
     [
       ['Name (a-z)', 'name_asc'],
-      ['Registration date (newest first)', 'created_at_desc'],
-      ['Registration date (oldest first)', 'created_at_asc'],
-      ['hello', 'hello']
+      ['By level (low-high)', 'level_'],
+      ['By Organization'],
+      ['By Most Recent']
+
+     
     ]
   end
 
