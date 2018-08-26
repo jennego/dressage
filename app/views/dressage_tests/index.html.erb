@@ -49,59 +49,6 @@
   locals: { dressage_tests: @dressage_tests }
 ) %>
 
-
-
-<div class="row">
-
-  <div class="col">
-
-     <div class="list-group">
-           <% @dressage_tests.each_with_index do |d, i| %>
-      <% if d.level == "Walk/Trot"  %>
-      <% if i == 4 %>
-      <%= puts i %>
-      <%= puts d %>
-      <li class="list-group-item list-group-item bg-dark text-white"> Walk/Trot</li>
-      <% end %>
-        <%= link_to (dressage_test_path(d)), class: "list-group-item list-group-item-action" do %>
-        <%= d.year %> <%= d.org_name %> <%= d.level %> <%=d.name %> 
-        <% end %>
-     <% end %> 
-     <% end %>
-
-    </div>
-  </div>
-
-  <div class="col">
-
-    <div class="list-group">
-           <% @dressage_tests.each_with_index do |d, i| %>
-      <% if d.level == "Training"  %>
-      <% if i == 0 %>
-      <li class="list-group-item list-group-item bg-dark text-white"> Training</li>
-      <% end %>
-        <%= link_to (dressage_test_path(d)), class: "list-group-item list-group-item-action" do %>
-        <%= d.year %> <%= d.org_name %> <%= d.level %> <%=d.name %> 
-        <% end %>
-     <% end %> 
-     <% end %>
-
-    </div>
-
-  </div>
-
-  <div class="col">
-
-    <div class="list-group">
-      <li class="list-group-item list-group-item bg-dark text-white"> First Level</li>
-      <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
-      <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
-      <a href="#" class="list-group-item list-group-item-action">Vestibulum at eros</a>
-    </div>
-
-  </div>
-
-  </div>
  
 </div>
 

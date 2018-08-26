@@ -45,12 +45,12 @@ scope :sorted_by, lambda { |sort_option|
   # extract the sort direction from the param value.
   direction = (sort_option =~ /desc$/) ? 'desc' : 'asc'
   case sort_option.to_s
-  when /^created_at_/
+  when /^year_/
     # Simple sort on the created_at column.
     # Make sure to include the table name to avoid ambiguous column names.
     # Joining on other tables is quite common in Filterrific, and almost
     # every ActiveRecord table has a 'created_at' column.
-    order("dressage_tests.created_at #{ direction }")
+    order("dressage_tests.year #{ direction }")
   when /^name_/
     # Simple sort on the name colums
     order("LOWER(dressage_tests.name) #{ direction }")
@@ -81,8 +81,8 @@ scope :filter_by_level, lambda {|level|
     [
       ['Name (a-z)', 'name_asc'],
       ['By level (low-high)', 'level_'],
-      ['By Organization'],
-      ['By Most Recent']
+      ['By Year (least recent)', 'year_asc'],
+      ['By Year (most recent)', 'year_desc']
 
      
     ]
