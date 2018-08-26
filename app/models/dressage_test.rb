@@ -53,7 +53,7 @@ class DressageTest < ApplicationRecord
 
   
 scope :filter_by_level, lambda {|level|
-  where('SELECT * from dressage_tests WHERE dressage_tests.level =' + level)
+  where("dressage_tests.level = " + "'" + level + "'")
 }
 
 
@@ -69,10 +69,7 @@ scope :filter_by_level, lambda {|level|
   end
 
    def self.options_for_filter_by_level
-    [
-      ['training', 'training'],
-      ['first level', 'level-1']  
-    ]
+    order('LOWER(name)').map { |e| [e.level] }.uniq!
   end
 
 end
