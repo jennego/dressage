@@ -26,7 +26,7 @@ wtA_test = DressageTest.create({
   linkname: 'Equestrian Canada PDF'} ]
 })
 
-wtB_test.save!
+wtA_test.save!
 wtB_test = DressageTest.create({
   org_name: 'EC',
   level: 'Walk/Trot',
