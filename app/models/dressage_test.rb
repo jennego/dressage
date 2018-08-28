@@ -61,9 +61,9 @@ scope :sorted_by, lambda { |sort_option|
         WHEN 'First Level'THEN 4
         WHEN 'Second Level' THEN 3 
         WHEN 'Third Level' THEN 2
-        WHEN 'FOURTH LEVEL' THEN 1
+        WHEN 'Fourth Level' THEN 1
         ELSE 0
-       END DESC, name ASC")
+       END #{ direction }, name ASC")
   else
     raise(ArgumentError, "Invalid sort option: #{ sort_option.inspect }")
   end
@@ -80,7 +80,8 @@ scope :filter_by_level, lambda {|level|
   def self.options_for_sorted_by
     [
       ['Name (a-z)', 'name_asc'],
-      ['By level (low-high)', 'level_'],
+      ['By level (low-high)', 'level_desc'],
+      ['By level (high-low)', 'level_asc'],
       ['By Year (least recent)', 'year_asc'],
       ['By Year (most recent)', 'year_desc']
 

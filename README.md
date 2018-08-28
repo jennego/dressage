@@ -1,5 +1,9 @@
 # Dressage Tests
 
+https://dressage-tests.herokuapp.com/
+
+Curently has EC walk/trot and EC/USEF training level tests only. 
+
 A mobile-friendly dressage test directory. All tests copyright of their respective copyright holders.
 Mobile app planned for future. Dressage is an equestrian sport and is with the exception of freestyle is a fixed set of patterns called 'tests'.
 
@@ -12,20 +16,13 @@ EC/USEF tests only for now. Others may be added on request as well (send them to
 To do
 
 - add data (dressage tests) - several more seeds still need to be created
-- create api - TO DO
+- Test and secure api
 - add association to similar tests  - TO DO - one test to many lists of tests? Or search? Or filter?
-- figure out auto complete (low priority - maybe wait for SPA?)
-- try filterific? - in progress with little success
-
-TO DO 
-Add submit button to filter
-Add filter by Level, Year, Org_Name 
-Sort by Level, Year 
+- figure out auto complete (low priority - maybe wait for SPA?)s
+- Add filter by Year, Org_Name 
 
 Add to dressage_test model 
 - current / boonlean 
 - purpose / stringh
 - introduce / string 
 
-TEST API
-Secure API
