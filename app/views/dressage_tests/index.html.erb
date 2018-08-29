@@ -19,10 +19,15 @@
       class: 'form-control'
     ) %>
   </div>
+
+  <div class="row"> 
+  <div class="col">
   <div class="form-group">
     Sorted by
     <%= f.select(:sorted_by, @filterrific.select_options[:sorted_by],{}, {:class => 'form-control'}) %>
   </div>
+  </div>
+  <div class="col">
   <div class="form-group">
   Level
       <%= f.select(
@@ -32,6 +37,8 @@
       {class: 'form-control'} 
       ) %>
   </div>
+  </div>
+  </div>
   <div class="form-group">
     <%= link_to(
       'Reset filters',
@@ -40,8 +47,7 @@
     ) %>
   <%= f.submit 'Filter', class: "btn btn-primary" %>
   </div>
-  <%# add an automated spinner to your form when the list is refreshed %>
-  <%= render_filterrific_spinner %>
+
 <% end %>
 
 <%= render(
