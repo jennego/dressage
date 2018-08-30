@@ -23,6 +23,6 @@ To do
 
 Add to dressage_test model 
 - current / boonlean 
-- purpose / stringh
+- purpose / string
 - introduce / string 
 

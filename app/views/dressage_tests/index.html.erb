@@ -21,23 +21,41 @@
   </div>
 
   <div class="row"> 
-  <div class="col">
-  <div class="form-group">
-    Sorted by
-    <%= f.select(:sorted_by, @filterrific.select_options[:sorted_by],{}, {:class => 'form-control'}) %>
+    <div class="col">
+      <div class="form-group">
+        Sorted by
+        <%= f.select(:sorted_by, @filterrific.select_options[:sorted_by],{}, {:class => 'form-control'}) %>
+      </div>
+    </div>
+    <div class="col">
+      <div class="form-group">
+      Level
+          <%= f.select(
+          :filter_by_level,
+          @filterrific.select_options[:filter_by_level], 
+          { include_blank: '- Any -' },
+          {class: 'form-control'} 
+          ) %>
+      </div>
+    </div> 
+    
+      <div class="col-3">
+        <div class="form-group">      
+        Current  <br>
+        Historical <br>
+        All <br>
+        </div>
+      </div>
+    
   </div>
-  </div>
-  <div class="col">
-  <div class="form-group">
-  Level
-      <%= f.select(
-      :filter_by_level,
-      @filterrific.select_options[:filter_by_level], 
-      { include_blank: '- Any -' },
-      {class: 'form-control'} 
-      ) %>
-  </div>
-  </div>
+  <div class="row">
+    <div class="col">
+    Filter by Year
+    </div>
+    <div class="col">
+    Filter by Org
+    </div>
+
   </div>
   <div class="form-group">
     <%= link_to(
@@ -55,7 +73,6 @@
   locals: { dressage_tests: @dressage_tests }
 ) %>
 
- 
 </div>
 
 </div>
