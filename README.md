@@ -21,8 +21,3 @@ To do
 - figure out auto complete (low priority - maybe wait for SPA?)s
 - Add filter by Year, Org_Name 
 
-Add to dressage_test model 
-- current / boonlean 
-- purpose / string
-- introduce / string 
-
