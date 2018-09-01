@@ -9,7 +9,7 @@ Mobile app planned for future. Dressage is an equestrian sport and is with the e
 
 Don't go around studying the wrong test
 
-Ruby on Rails with postgresql.
+This app is Ruby on Rails with postgresql, using bootstrap and filterific. 
 
 EC/USEF tests only for now. Others may be added on request as well (send them to me and let me know where to find them!)
 
