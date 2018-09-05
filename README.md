@@ -19,5 +19,7 @@ To do
 - Test and secure api
 - add association to similar tests  - TO DO - one test to many lists of tests? Or search? Or filter?
 - figure out auto complete (low priority - maybe wait for SPA?)s
-- Add filter by Year, Org_Name 
+- Add filter by Year, Org_Name (add function to do it)
+- Seed tests 1-4 level
+- Add current - true/false to filer and show pages
 
