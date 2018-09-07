@@ -54,6 +54,12 @@
     </div>
     <div class="col">
     Filter by Org
+     <%= f.select(
+          :filter_by_org_name,
+          @filterrific.select_options[:filter_by_org_name], 
+          { include_blank: '- Any -' },
+          {class: 'form-control'} 
+          ) %>
     </div>
 
   </div>

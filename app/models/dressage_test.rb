@@ -10,7 +10,8 @@ class DressageTest < ApplicationRecord
     available_filters: [
       :search_query,
       :sorted_by,
-      :filter_by_level
+      :filter_by_level,
+      :filter_by_org_name
     ]
   )
 
@@ -63,7 +64,7 @@ scope :sorted_by, lambda { |sort_option|
         WHEN 'Third Level' THEN 2
         WHEN 'Fourth Level' THEN 1
         ELSE 0
-       END #{ direction }, name ASC")
+        END #{ direction }, name ASC")
   else
     raise(ArgumentError, "Invalid sort option: #{ sort_option.inspect }")
   end
@@ -72,6 +73,10 @@ scope :sorted_by, lambda { |sort_option|
   
 scope :filter_by_level, lambda {|level|
   where("dressage_tests.level = " + "'" + level + "'")
+}
+
+scope :filter_by_org_name, lambda {|org|
+  where("dressage_tests.org_name = " + "'" + org + "'")
 }
 
 
@@ -84,13 +89,15 @@ scope :filter_by_level, lambda {|level|
       ['By level (high-low)', 'level_asc'],
       ['By Year (least recent)', 'year_asc'],
       ['By Year (most recent)', 'year_desc']
-
-     
     ]
   end
 
-   def self.options_for_filter_by_level
+  def self.options_for_filter_by_level
     order('LOWER(name)').map { |e| [e.level] }.uniq!
+  end
+
+  def self.options_for_filter_by_org_name
+    order('LOWER(name)').map { |e| [e.org_name] }.uniq!
   end
 
 end
