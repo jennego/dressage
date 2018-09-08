@@ -79,7 +79,17 @@
   locals: { dressage_tests: @dressage_tests }
 ) %>
 
+<% if false %>
+  <% if params[:filterrific][:filter_by_level].blank?%> 
+  All levels 
+  <% else %> 
+    <%= params[:filterrific][:filter_by_level] %>
+  <% end %>
+<% end %>
+
 </div>
 
 </div>
+
+
 
