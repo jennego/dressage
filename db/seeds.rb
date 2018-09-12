@@ -4,6 +4,7 @@ wtA_test = DressageTest.create({
   level: 'Walk/Trot',
   name: 'A',
   year: '2009',
+  current: true,
   moves_attributes:[
   { letter: 'A', move: 'Enter at working trot rising'},
   { letter: 'X', move: 'Halt through walk. Salute and proceed at working trot rising '},
@@ -32,6 +33,7 @@ wtB_test = DressageTest.create({
   level: 'Walk/Trot',
   name: 'B',
   year: '2010',
+  current: 'true',
   moves_attributes:[
   { letter: 'A', move: 'Enter at working trot rising'},
   { letter: 'X', move: 'Halt through walk. Salute and proceed at working trot rising '},
@@ -63,6 +65,7 @@ wtC_test = DressageTest.create({
   level: 'Walk/Trot',
   name: 'C',
   year: '2010',
+  current: true,
   moves_attributes:[
   { letter: 'A', move: 'Enter at working trot'},
   { letter: 'X', move: 'Halt. Salute and proceed at working trot'},
@@ -77,8 +80,8 @@ wtC_test = DressageTest.create({
   { letter: 'E to B', move: 'Half 20 meter circle right. At B proceed straight ahead '},
   { letter: 'A', move: 'Turn down centre line'},
   { letter: 'X', move: 'Halt. Salute.'}
- ],
-   links_attributes: [
+  ],
+  links_attributes: [
   {url:'https://www.equestrian.ca/cdn/storage/resources_v2/EHpufne6gmWqrENh3/original/EHpufne6gmWqrENh3.pdf' , 
   linkname: 'Equestrian Canada PDF'} ]
 })
@@ -91,6 +94,7 @@ wtD_test = DressageTest.create({
   level: 'Walk/Trot',
   name: 'D',
   year: '2010',
+  current: true,
   moves_attributes:[
   { letter: 'A', move: 'Enter at working trot'},
   { letter: 'X', move: 'Halt. Salute and proceed at working trot'},
@@ -123,6 +127,7 @@ train1_test = DressageTest.create({
   level: 'Training',
   name: '1',
   year: '2015',
+  current: true,
   moves_attributes:[
   { letter: 'A', move: 'Enter at working trot'},
   { letter: 'X', move: 'Halt. Salute and proceed at working trot'},
@@ -153,6 +158,7 @@ train2_test = DressageTest.create({
   level: 'Training',
   name: '2',
   year: '2015',
+  current: true,
   moves_attributes:[
   { letter: 'A', move: 'Enter at working trot'},
   { letter: 'X', move: 'Halt. Salute and proceed at working trot'},
@@ -190,6 +196,7 @@ train3_test = DressageTest.create({
   level: 'Training',
   name: '3',
   year: '2015',
+  current: true,
   moves_attributes:[
   { letter: 'A', move: 'Enter at working trot'},
   { letter: 'X', move: 'Halt. Salute and proceed at working trot'},

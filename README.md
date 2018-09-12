@@ -24,4 +24,3 @@ To do
 - redo seeds to add more info
 - upload files in seeds?
 - edit forms 
-- 
