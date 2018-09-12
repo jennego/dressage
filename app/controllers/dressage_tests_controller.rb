@@ -48,7 +48,7 @@ def index
         filter_by_level: DressageTest.options_for_filter_by_level,
         filter_by_org_name: DressageTest.options_for_filter_by_org_name
       },
-      persistence_id: 'shared_key',
+      persistence_id: false,
       default_filter_params: {},
       # available_filters: [:sorted_by],
       sanitize_params: true
