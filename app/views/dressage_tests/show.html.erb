@@ -9,6 +9,17 @@
 
       <p><%= @dressage_test&.note %> </p>
 
+      <% if @dressage_test.current == false %>
+
+      <div class="border border-danger alert-light alert">
+      <i class="fas fa-exclamation-triangle"></i>
+        <h3 class="text-danger"> Whoa! According to <%=@dressage_test.org_name%>, this is an outdated test. </h3>
+        <p> Check with your show organizer to make sure you have the correct test. </p>
+        <p> Search for a current version of this test </p> 
+      </div> 
+
+      <% end %>
+
 
       <table class="table">
         <thead>

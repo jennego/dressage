@@ -6,7 +6,7 @@ class DressageTest < ApplicationRecord
   accepts_nested_attributes_for :links
 
   filterrific(
-    default_filter_params: { sorted_by: 'level_' },
+    default_filter_params: { sorted_by: 'level_desc' },
     available_filters: [
       :search_query,
       :sorted_by,
@@ -84,11 +84,11 @@ scope :filter_by_org_name, lambda {|org|
   # It is called in the controller as part of `initialize_filterrific`.
   def self.options_for_sorted_by
     [
-      ['Name (a-z)', 'name_asc'],
       ['By level (low-high)', 'level_desc'],
       ['By level (high-low)', 'level_asc'],
       ['By Year (least recent)', 'year_asc'],
-      ['By Year (most recent)', 'year_desc']
+      ['By Year (most recent)', 'year_desc'],
+      ['Name (a-z)', 'name_asc']
     ]
   end
 
