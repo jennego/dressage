@@ -15,7 +15,7 @@ class DressageTest < ApplicationRecord
     ]
   )
 
-   scope :search_query, lambda { |query|
+  scope :search_query, lambda { |query|
     return nil  if query.blank?
     # condition query, parse into individual keywords
     terms = query.to_s.downcase.split(/\s+/)
@@ -56,7 +56,7 @@ scope :sorted_by, lambda { |sort_option|
     # Simple sort on the name colums
     order("LOWER(dressage_tests.name) #{ direction }")
   when /^level_/
-   order("CASE Level
+    order("CASE Level
         WHEN 'Walk/Trot' THEN 6
         WHEN 'Training' THEN 5
         WHEN 'First Level'THEN 4
