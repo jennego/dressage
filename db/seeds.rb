@@ -1,6 +1,6 @@
 
 wtA_test = DressageTest.create({
-  org_name: 'EC',
+  org_name: 'Equestrian Canada',
   level: 'Walk/Trot',
   name: 'A',
   year: '2009',
@@ -29,7 +29,7 @@ wtA_test = DressageTest.create({
 
 wtA_test.save!
 wtB_test = DressageTest.create({
-  org_name: 'EC',
+  org_name: 'Equestrian Canada',
   level: 'Walk/Trot',
   name: 'B',
   year: '2010',
@@ -61,7 +61,7 @@ wtB_test.save!
 
 
 wtC_test = DressageTest.create({
-  org_name: 'EC',
+  org_name: 'Equestrian Canada',
   level: 'Walk/Trot',
   name: 'C',
   year: '2010',
