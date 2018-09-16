@@ -15,12 +15,17 @@ EC/USEF tests only for now. Others may be added on request as well (send them to
 
 To do
 
+Before next deployment
+- make radio current/not current/all filters work
+- make filter by year work 
+****
+
+- fix sql security issues
 - add data (dressage tests) - several more seeds still need to be created
 - Test and secure api
 - figure out auto complete (low priority - maybe wait for SPA?)s
 - Seed tests 1-4 level
 - Add current - true/false to filter and show pages
-- fix sql security issues
 - redo seeds to add more info
 - upload files in seeds?
 - link current versions of tests to old tests?

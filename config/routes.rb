@@ -5,14 +5,14 @@ resources :dressage_tests
  get '/about', to: 'welcome#about'
  root 'dressage_tests#index'
  devise_for :users
+ resources :welcome 
 
 
 
-   namespace :api, defaults: { format: :json } do
+namespace :api, defaults: { format: :json } do
     namespace :v1 do
       resources :dressage_tests, only: [:index, :show, :create, :update, :destroy]
-     resources :tokens, only: [:create]
-     end
-   end
-
+      resources :tokens, only: [:create]
+      end
+  end
 end

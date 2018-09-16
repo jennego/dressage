@@ -6,10 +6,10 @@
     <thead class='thead-light'>
       <tr>
         <th>Year</th>
-        <th> Org </th>
+        <th>Org </th>
         <th>Level</th>
         <th>Test</th>
-        <th> Current </th>
+        <th>Current</th>
       </tr>
     </thead>
     <% dressage_tests.each do |d| %>
@@ -24,8 +24,7 @@
         <td>  <%= link_to (dressage_test_path(d)) do %> <%= d.level %> <% end %> </td>
         <td>  <%= link_to (dressage_test_path(d)) do %> <%= d.name %> <% end %> </td>
         <td>  <%= link_to (dressage_test_path(d)) do %>  <%= d.current == true ? ('Yes') : ('No') %>  
-        <% end %> </td>
-        <td> </td> 
+        <% end %> </td> 
       </tr>
     <% end %>
   </table>

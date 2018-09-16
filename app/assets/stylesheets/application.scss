@@ -62,6 +62,11 @@
 img.arena {
   height: 80%;
 }
+
+img.arena2 {
+  width: 240px;
+  max-height: 800px;
+}
 #content{
     position: absolute;
     top: 50%;
@@ -110,4 +115,86 @@ body.dressage_tests.index {
   background: white;
   padding: 10px;
   margin-bottom: 10px;
+}
+
+.btn{
+  cursor: pointer;
+}
+.icon-close {
+  right: 2rem;
+  top: 1.8rem;
+  transition: right .6s ease-in-out;
+  cursor: pointer;
+}
+
+.icon-close img {
+  width: 20px;
+}
+
+a,
+label,
+p {
+  color: #fff;;
+}
+label {
+  font-weight: 600;
+}
+.has-error .help-block {
+  color: $white; 
+  text-align: center;
+}
+
+.toggle-form {
+  right: -9999px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  transition: right .6s ease-in-out;
+}
+.toggle-form.active {
+    right: 0;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: .5rem .75rem;
+    font-size: .9rem;
+    line-height: 1.25;
+    //color: #495057;
+    background-color: #fff;
+    background-image: none;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 1.5rem;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+.formwrap {
+  background-color: #1aafff; 
+  height: 100%;
+  width: 400px;
+  float: right;
+  box-shadow: -1px 0px 12px rgba(0, 0, 0, 0.1);
+}
+.formwrap form input, .formwrap form input:focus {
+    background-color: transparent;
+    border-color: #fff;
+    color: #fff;
+    margin-right: 10px;
+}
+
+
+.form-control {
+        background-color: transparent;
+        border-color: #fff;
+        color: #fff;
+        margin-right: 10px;
+ }
+
+@media (max-width: 575px) {
+  .formwrap{
+    width: 100%
+  }
 }
