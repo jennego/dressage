@@ -18,6 +18,8 @@ To do
 Before next deployment
 - make radio current/not current/all filters work
 - make filter by year work 
+- add new arena slide out to page (and toggle)
+
 ****
 
 - fix sql security issues
@@ -30,3 +32,4 @@ Before next deployment
 - upload files in seeds?
 - link current versions of tests to old tests?
 - edit forms 
+- show arena figures on click or hover 

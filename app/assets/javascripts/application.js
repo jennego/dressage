@@ -70,3 +70,9 @@ $( document ).ready(function() {
         $('.icon-close').removeClass('open');
     });
 });
+
+$('#myTab a').on('click', function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+})
+
