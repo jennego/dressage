@@ -25,7 +25,7 @@
           <%= link_to 'Dressage Tests', dressage_tests_path, class: 'nav-link' %>
         </li>
       <li class="nav-item">
-        <a class="nav-link" onclick="on()"> Arena </a>
+        <a class="nav-link cta-open"> Arena </a>
       </li>
     </ul>
     <ul class="navbar-nav">
@@ -39,21 +39,40 @@
   </div>
 </nav>
 
-<div id="overlay" onclick="off()">
-  <div class="row">
-    <div class="col-lg-6">
-      click to close arena diagram
-    </div>
-    <div class="col-lg-6">
-     <img class="arena"  src="https://upload.wikimedia.org/wikipedia/commons/1/15/Publicarena.svg" />
-    </div>
-  </div>
-</div>
+
 
     <div class="container-fluid">
        <p class="notice"><%= notice %></p>
        <p class="alert"><%= alert %></p>
     <%= yield %>
     </div>
+
+    <section class="toggle-arena">
+  <div class="formwrap px-4">
+    <div class="icon-close pos-a"><img src="https://www.solodev.com/_/images/cross.png" alt="Close Button"></div>
+    <p class="text-white mt-4 h3">Arena Diagram</p>
+    <p> Wait, where</p>
+
+<!-- Nav tabs -->
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="large-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Standard</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="small-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Small</a>
+  </li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+  <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab"> 
+  <h4 class="text-white mt-2">20m x 60m Large Arena </h4> 
+    <img class="arena2"  src="https://localriding.com/image-files/dressage-arena-lg.jpg" />
+  </div>
+  <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab"> Small </div>
+</div>
+      
+  </div>
+<div class="toggle-bg"></div>
   </body>
 </html>

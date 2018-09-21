@@ -131,11 +131,6 @@ body.dressage_tests.index {
   width: 20px;
 }
 
-a,
-label,
-p {
-  color: #fff;;
-}
 label {
   font-weight: 600;
 }
@@ -144,7 +139,7 @@ label {
   text-align: center;
 }
 
-.toggle-form {
+.toggle-arena {
   right: -9999px;
   position: fixed;
   top: 0;
@@ -153,7 +148,7 @@ label {
   z-index: 9999;
   transition: right .6s ease-in-out;
 }
-.toggle-form.active {
+.toggle-arena.active {
     right: 0;
 }
 
@@ -178,20 +173,7 @@ label {
   float: right;
   box-shadow: -1px 0px 12px rgba(0, 0, 0, 0.1);
 }
-.formwrap form input, .formwrap form input:focus {
-    background-color: transparent;
-    border-color: #fff;
-    color: #fff;
-    margin-right: 10px;
-}
 
-
-.form-control {
-        background-color: transparent;
-        border-color: #fff;
-        color: #fff;
-        margin-right: 10px;
- }
 
 @media (max-width: 575px) {
   .formwrap{
