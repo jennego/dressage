@@ -3,7 +3,7 @@ wtA_test = DressageTest.create({
   org_name: 'Equestrian Canada',
   level: 'Walk/Trot',
   name: 'A',
-  year: '2009',
+  year: 2009,
   current: true,
   moves_attributes:[
   { letter: 'A', move: 'Enter at working trot rising'},
@@ -32,7 +32,7 @@ wtB_test = DressageTest.create({
   org_name: 'Equestrian Canada',
   level: 'Walk/Trot',
   name: 'B',
-  year: '2010',
+  year: 2010,
   current: 'true',
   moves_attributes:[
   { letter: 'A', move: 'Enter at working trot rising'},
@@ -64,7 +64,7 @@ wtC_test = DressageTest.create({
   org_name: 'Equestrian Canada',
   level: 'Walk/Trot',
   name: 'C',
-  year: '2010',
+  year: 2010,
   current: true,
   moves_attributes:[
   { letter: 'A', move: 'Enter at working trot'},
@@ -90,10 +90,10 @@ wtC_test.save!
 
 
 wtD_test = DressageTest.create({
-  org_name: 'EC',
+  org_name: 'Equestrian Canada',
   level: 'Walk/Trot',
   name: 'D',
-  year: '2010',
+  year: 2010,
   current: true,
   moves_attributes:[
   { letter: 'A', move: 'Enter at working trot'},
@@ -123,11 +123,16 @@ wtD_test = DressageTest.create({
 wtD_test.save!
 
 train1_test = DressageTest.create({
-  org_name: 'EC/USEF',
+  org_name: 'United Stakes Equestrian Federation / Equestrian Canada',
   level: 'Training',
   name: '1',
-  year: '2015',
+  year: 2015,
   current: true,
+  note: 'All trot work may be ridden sitting or rising, unless stated.
+  Halts may be through the walk'
+  purpose: 'To confirm that the horse demonstrates correct basics, is supple and moves freely
+  forward in a clear rhythm with a steady tempo, accepting contact with the bit.',
+  introduce:'Working trot; working canter; medium walk; free walk; 20m circles in trot and canter',
   moves_attributes:[
   { letter: 'A', move: 'Enter at working trot'},
   { letter: 'X', move: 'Halt. Salute and proceed at working trot'},
@@ -154,11 +159,16 @@ links_attributes: [
 train1_test.save!
 
 train2_test = DressageTest.create({
-  org_name: 'EC/USEF',
+  org_name: 'United Stakes Equestrian Federation / Equestrian Canada',
   level: 'Training',
   name: '2',
-  year: '2015',
+  year: 2015,
   current: true,
+  note: 'All trot work may be ridden sitting or rising, unless stated.
+  Halts may be through the walk'
+  purpose: 'To confirm that the horse demonstrates correct basics, is supple and moves freely
+  forward in a clear rhythm with a steady tempo, accepting contact with the bit.',
+  introduce:'Stretch circle in trot',
   moves_attributes:[
   { letter: 'A', move: 'Enter at working trot'},
   { letter: 'X', move: 'Halt. Salute and proceed at working trot'},
@@ -192,11 +202,16 @@ links_attributes: [
 train2_test.save!
 
 train3_test = DressageTest.create({
-  org_name: 'EC/USEF',
+  org_name: 'United Stakes Equestrian Federation / Equestrian Canada',
   level: 'Training',
   name: '3',
-  year: '2015',
+  year: 2015,
   current: true,
+    note: 'All trot work may be ridden sitting or rising, unless stated.
+  Halts may be through the walk'
+  purpose: 'To confirm that the horse demonstrates correct basics, is supple and moves freely
+  forward in a clear rhythm with a steady tempo, accepting contact with the bit.',
+  introduce:'Changing of bend on a shallow loop, canter-trot transition on diagonal',
   moves_attributes:[
   { letter: 'A', move: 'Enter at working trot'},
   { letter: 'X', move: 'Halt. Salute and proceed at working trot'},

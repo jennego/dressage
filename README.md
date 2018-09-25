@@ -27,9 +27,9 @@ Before next deployment
 - Test and secure api
 - figure out auto complete (low priority - maybe wait for SPA?)s
 - Seed tests 1-4 level
-- Add current - true/false to filter and show pages
 - redo seeds to add more info
 - upload files in seeds?
 - link current versions of tests to old tests?
 - edit forms 
 - show arena figures on click or hover 
+- save arena size
