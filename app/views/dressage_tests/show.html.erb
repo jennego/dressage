@@ -35,9 +35,8 @@
             <% end %>
         </tbody>
       </table>
-
-</div>
- <div class="col-lg-4">
+    </div>
+  <div class="col-lg-4">
     <h5 class="box-heading"> Notes </h5> 
     <div class="border border-dark p-1">
       <p> <em> <%= @dressage_test&.note %> </em> </p>
@@ -53,11 +52,9 @@
 
     <h5> Links and Resources </h5>
     <ul>
-
         <% @dressage_test&.links.each do |l| %>
         <li> <a href='<%= l.url %>'> <%= l.linkname %> </a> </li>
         <% end %>
-
     </ul>
 </div>
 </div>
