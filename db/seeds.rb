@@ -207,7 +207,7 @@ train3_test = DressageTest.create({
   name: '3',
   year: 2015,
   current: true,
-    note: 'All trot work may be ridden sitting or rising, unless stated.
+  note: 'All trot work may be ridden sitting or rising, unless stated.
   Halts may be through the walk'
   purpose: 'To confirm that the horse demonstrates correct basics, is supple and moves freely
   forward in a clear rhythm with a steady tempo, accepting contact with the bit.',

@@ -9,7 +9,7 @@ Add official links.
 
 <%= f.fields_for :links do |f| %>
     <%= render 'link_fields', :f => f %>
-     <% end %>
+<% end %>
 
 <div class='links'>
   <%= link_to_add_association 'add link', f, :links, class: "btn btn-dark" %>
@@ -23,7 +23,7 @@ Add official links.
 
 <%= f.fields_for :moves do |f| %>
     <%= render 'move_fields', :f => f %>
-     <% end %>
+<% end %>
 
 <div class='links'>
   <%= link_to_add_association 'add dressage move', f, :moves, class: "btn btn-dark" %>
