@@ -37,18 +37,24 @@
       </table>
     </div>
   <div class="col-lg-4">
+  <% if @dressage_test.note.blank? == false %>
     <h5 class="box-heading"> Notes </h5> 
     <div class="border border-dark p-1">
-      <p> <em> <%= @dressage_test&.note %> </em> </p>
-      </div> 
+      <p> <em> <%= @dressage_test.note %> </em> </p>
+    </div>
+  <% end %> 
+  <% if @dressage_test.purpose.blank? == false %>
   <h5 class="box-heading"> Purpose </h5> 
     <div class="border border-dark p-1 pt-2">
-      <p><%= @dressage_test&.purpose %> </p>
+      <p><%= @dressage_test.purpose %> </p>
     </div>
+  <% end %>
+  <% if @dressage_test.introduce.blank? == false %>
   <h5 class="box-heading"> Introduce </h5> 
     <div class="border border-dark p-1">
-      <p><%= @dressage_test&.introduce %> </p>
+      <p><%= @dressage_test.introduce %> </p>
     </div>
+  <% end %>
 
     <h5> Links and Resources </h5>
     <ul>
