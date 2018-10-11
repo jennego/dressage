@@ -11,7 +11,8 @@ class DressageTest < ApplicationRecord
       :search_query,
       :sorted_by,
       :filter_by_level,
-      :filter_by_org_name
+      :filter_by_org_name,
+      :filter_by_year
     ]
   )
 
@@ -78,7 +79,9 @@ scope :filter_by_level, lambda {|level|
 scope :filter_by_org_name, lambda {|org|
   where("dressage_tests.org_name = " + "'" + org + "'")
 }
-
+scope :filter_by_year, lambda {|year|
+  where("dressage_tests.year = " + "'" + year.to_s + "'")
+}
 
   # This method provides select options for the `sorted_by` filter select input.
   # It is called in the controller as part of `initialize_filterrific`.
@@ -99,5 +102,10 @@ scope :filter_by_org_name, lambda {|org|
   def self.options_for_filter_by_org_name
     order('LOWER(name)').map { |e| [e.org_name] }.uniq!
   end
+
+  def self.options_for_filter_by_year
+    order(:year).map { |e| [e.year] }.uniq!
+  end
+
 
 end
