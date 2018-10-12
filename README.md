@@ -17,8 +17,10 @@ To do
 
 Before next deployment
 - make radio current/not current/all filters work
-- make filter by year work 
+- make filter by year work - done!
 - add new arena slide out to page (and toggle) - done! 
+
+Scheduled deployment Oct 13 or 14
 
 ****
 
