@@ -16,7 +16,7 @@ EC/USEF tests only for now. Others may be added on request as well (send them to
 To do
 
 Before next deployment
-- make radio current/not current/all filters work
+- make radio current/not current/all filters work - done but radio not working (in select box for now)
 - make filter by year work - done!
 - add new arena slide out to page (and toggle) - done! 
 

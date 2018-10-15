@@ -40,8 +40,15 @@
     </div> 
     
       <div class="col-3">
-        <div class="form-group">      
-  
+        <div class="form-group">    
+        Current  
+          <%= f.select(
+          :current_filter,
+          @filterrific.select_options[:current_filter], 
+          { include_blank: '- Any -' },
+          {class: 'form-control'} 
+          ) %>
+
         </div>
       </div>
     

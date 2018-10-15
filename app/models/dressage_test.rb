@@ -12,7 +12,8 @@ class DressageTest < ApplicationRecord
       :sorted_by,
       :filter_by_level,
       :filter_by_org_name,
-      :filter_by_year
+      :filter_by_year,
+      :current_filter
     ]
   )
 
@@ -83,8 +84,24 @@ scope :filter_by_year, lambda {|year|
   where("dressage_tests.year = " + "'" + year.to_s + "'")
 }
 
+  
+scope :current_filter, lambda { |current_option|
+
+  case current_option.to_s
+  when /^is_current_/
+    where("dressage_tests.current = true")
+  when /^is_not_current_/
+    where("dressage_tests.current = false")
+  else
+    raise(ArgumentError, "hmm: #{ current_option.inspect }")
+  end
+}
+
+
+
   # This method provides select options for the `sorted_by` filter select input.
   # It is called in the controller as part of `initialize_filterrific`.
+  
   def self.options_for_sorted_by
     [
       ['By level (low-high)', 'level_desc'],
@@ -92,6 +109,13 @@ scope :filter_by_year, lambda {|year|
       ['By Year (least recent)', 'year_asc'],
       ['By Year (most recent)', 'year_desc'],
       ['Name (a-z)', 'name_asc']
+    ]
+  end
+  
+  def self.options_for_current_filter
+    [
+      ['Current', 'is_current_'],
+      ['Historical', 'is_not_current_']
     ]
   end
 
