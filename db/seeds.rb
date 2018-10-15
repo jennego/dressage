@@ -129,7 +129,7 @@ train1_test = DressageTest.create({
   year: 2015,
   current: true,
   note: 'All trot work may be ridden sitting or rising, unless stated.
-  Halts may be through the walk'
+  Halts may be through the walk',
   purpose: 'To confirm that the horse demonstrates correct basics, is supple and moves freely
   forward in a clear rhythm with a steady tempo, accepting contact with the bit.',
   introduce:'Working trot; working canter; medium walk; free walk; 20m circles in trot and canter',
@@ -165,7 +165,7 @@ train2_test = DressageTest.create({
   year: 2015,
   current: true,
   note: 'All trot work may be ridden sitting or rising, unless stated.
-  Halts may be through the walk'
+  Halts may be through the walk',
   purpose: 'To confirm that the horse demonstrates correct basics, is supple and moves freely
   forward in a clear rhythm with a steady tempo, accepting contact with the bit.',
   introduce:'Stretch circle in trot',
@@ -208,7 +208,7 @@ train3_test = DressageTest.create({
   year: 2015,
   current: true,
   note: 'All trot work may be ridden sitting or rising, unless stated.
-  Halts may be through the walk'
+  Halts may be through the walk',
   purpose: 'To confirm that the horse demonstrates correct basics, is supple and moves freely
   forward in a clear rhythm with a steady tempo, accepting contact with the bit.',
   introduce:'Changing of bend on a shallow loop, canter-trot transition on diagonal',
