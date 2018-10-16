@@ -83,7 +83,6 @@ scope :filter_by_org_name, lambda {|org|
 scope :filter_by_year, lambda {|year|
   where("dressage_tests.year = " + "'" + year.to_s + "'")
 }
-
   
 scope :current_filter, lambda { |current_option|
 
@@ -96,8 +95,6 @@ scope :current_filter, lambda { |current_option|
     raise(ArgumentError, "hmm: #{ current_option.inspect }")
   end
 }
-
-
 
   # This method provides select options for the `sorted_by` filter select input.
   # It is called in the controller as part of `initialize_filterrific`.
@@ -130,6 +127,5 @@ scope :current_filter, lambda { |current_option|
   def self.options_for_filter_by_year
     order(:year).map { |e| [e.year] }.uniq!
   end
-
 
 end

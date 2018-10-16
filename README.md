@@ -15,17 +15,7 @@ EC/USEF tests only for now. Others may be added on request as well (send them to
 
 To do
 
-Before next deployment
-- make radio current/not current/all filters work - done but radio not working (in select box for now)
-- make filter by year work - done!
-- add new arena slide out to page (and toggle) - done! 
-
-Scheduled deployment Oct 13 or 14
-
-****
-
-- fix sql security issues
-- add data (dressage tests) - several more seeds still need to be created
+- fix sql security issues - look into active record queries 
 - Test and secure api
 - figure out auto complete (low priority - maybe wait for SPA?)s
 - Seed tests 1-4 level
@@ -34,3 +24,5 @@ Scheduled deployment Oct 13 or 14
 - edit forms 
 - show arena figures on click or hover 
 - save arena size
+- show radio for current filter 
+- click on row? (javascript)
