@@ -242,3 +242,55 @@ links_attributes: [
 })
 
 train3_test.save!
+
+first1_test = DressageTest.create({
+  org_name: 'United Stakes Equestrian Federation / Equestrian Canada',
+  level: 'First',
+  name: '1',
+  year: 2015,
+  current: true,
+  note: 'All trot work may be ridden sitting or rising, unless stated.
+  Halts may be through the walk',
+  purpose: 'To confirm that the horse demonstrates correct basics, and in addition to the
+requirements of Training Level, has developed the thrust to achieve improved balance
+and throughness and maintains a more consistent contact with the bit.',
+  introduce:'10m half circle at trot; 15m circle in canter; lengthening of stride in trot and canter',
+  moves_attributes:[
+  { letter: 'A', move: 'Enter at working trot'},
+  { letter: 'X', move: 'Halt. Salute and proceed at working trot'},
+  { letter: 'C', move: 'Track left'},
+  { letter: 'E-X', move: 'Half circle left 10m, returning to track at H'},
+  { letter: 'B-X', move: 'Half circle right 10m, returning to track at M'},
+  { letter: 'C', move: 'Circle 20m rising trot, allowing horse to stretch foreword and downward'},
+  { letter: 'Before C', move: 'Shorten reins'},
+  { letter: 'C', move: 'Working trot'},
+  { letter: 'S-F', move: 'Change rein, lengthened stride in trot '},
+  { letter: 'F', move: 'Working trot'},
+  { letter: 'A', move: 'Medium walk'},
+  { letter: 'V-R', move: 'Change rein, free walk'},
+  { letter: 'R', move: 'Medium walk'},
+  { letter: 'M', move: 'Working trot'},
+  { letter: 'C', move: 'Working canter left lead'},
+  { letter: 'S-V', move: 'Lengthen stride in canter'},
+  { letter: 'V', move: 'Circle left 15m. Develop working canter in first half of circle '},
+  { letter: 'F-X-H', move: 'Change rein'},
+  { letter: 'X', move: 'Working trot'},
+  { letter: 'C', move: 'Woking canter right lead'},
+  { letter: 'R-P', move: 'Lengthen stride in canter'},
+  { letter: 'P', move: 'Circle right 15m. Develop working canter in first half of circle '},
+  { letter: 'A', move: 'Working trot'},
+  { letter: 'V-M', move: 'Change rein, lengthen stride in trot'},
+  { letter: 'M', move: 'Working trot '},
+  { letter: 'E', move: 'Half circle left 10m'},
+  { letter: 'X', move: 'Working trot'},
+  { letter: 'X', move: 'Down centerline '},
+  { letter: 'G', move: 'Halt, salute'}
+],
+links_attributes: [
+  {url:'https://www.equestrian.ca/cdn/storage/resources_v2/BYHd3H47HDBJQxugm/original/BYHd3H47HDBJQxugm.pdf' , linkname: 'Equestrian Canada PDF'},
+  {url:'https://www.usef.org/forms-pubs/OidZ9HCj3Fs/2015-training-level-test-3' , linkname: 'United States Equestrian Federation PDF'}
+]
+})
+
+train3_test.save!
+
