@@ -13,17 +13,20 @@ This app runs on Ruby on Rails with postgreSQL, using bootstrap and filterific.
 
 EC/USEF tests only for now. Others may be added on request as well (send them to me and let me know where to find them!)
 
+For next deployment
+- fix sql security issues - look into active record queries 
+- seed first level 2015
+- click on row? (javascript)
+
 To do
 
-- fix sql security issues - look into active record queries 
 - Test and secure api
 - figure out auto complete (low priority - maybe wait for SPA?)s
 - Seed tests 1-4 level
+- seed 2019 tests 
 - upload files in seeds?
 - link current versions of tests to old tests?
-- edit forms 
 - show arena figures on click or hover 
 - save arena size
 - show radio for current filter 
-- click on row? (javascript)
 
