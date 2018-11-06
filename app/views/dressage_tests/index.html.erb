@@ -10,6 +10,7 @@
       * AJAX spinner while AJAX request is being processed
   * sets form_for options like :url, :method and input name prefix
 %>
+
 <%= form_for_filterrific @filterrific,  html: { id: 'filterrific-no-ajax-auto-submit' , class:'filter-form'}  do |f|%>
   <div class="form-group">
     Search
@@ -19,7 +20,6 @@
       class: 'form-control'
     ) %>
   </div>
-
   <div class="row"> 
     <div class="col">
       <div class="form-group">

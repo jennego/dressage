@@ -7,6 +7,7 @@ class DressageTest < ApplicationRecord
 
   filterrific(
     default_filter_params: { sorted_by: 'level_desc' },
+    default_filter_params: { current_filter: 'is_current_' },
     available_filters: [
       :search_query,
       :sorted_by,
