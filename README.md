@@ -4,8 +4,13 @@ https://dressage-tests.herokuapp.com/
 
 Currently has EC walk/trot and EC/USEF training level tests only. 
 
-A mobile-friendly dressage test directory. All tests copyright of their respective copyright holders.
-Mobile app planned for future. Dressage is an equestrian sport and is with the exception of freestyle is a fixed set of patterns called 'tests'.
+A mobile-friendly dressage test directory. Wondering what your test is? Last minute look up? No time to print? Easily view your test from your phone or tablet! 
+
+All tests copyright of their respective copyright holders.
+Mobile app planned for future. 
+Other tests (eventing, working equitation, FEI, para-equestrian) may be added on request or as time permits.
+
+For non-equestrians: Dressage is an equestrian sport and is with the exception of freestyle is a fixed set of patterns called 'tests'.
 
 Don't go around studying the wrong test!!
 
