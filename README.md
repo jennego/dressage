@@ -34,4 +34,5 @@ To do
 - show arena figures on click or hover 
 - save arena size
 - show radio for current filter 
+- home page - search only?
 
