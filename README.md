@@ -22,6 +22,7 @@ For next deployment
 - fix sql security issues - look into active record queries 
 - seed first level 2015
 - click on row? (javascript)
+- home page - search only until search or show all or show all current
 
 To do
 
@@ -31,8 +32,7 @@ To do
 - seed 2019 tests 
 - upload files in seeds?
 - link current versions of tests to old tests?
-- show arena figures on click or hover 
+- show arena figures on click or hover - canvas or svg? 
 - save arena size
 - show radio for current filter 
-- home page - search only?
 
