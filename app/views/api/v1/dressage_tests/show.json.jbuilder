@@ -3,6 +3,7 @@
   json.orgname @test.org_name
   json.level @test.level
   json.name @test.name
+  json.full_name @test.org_name + ' ' + @test.year.to_s + ' ' + @test.level + ' ' + @test.name 
     json.links @test.links.each do |link| 
         json.linkid link.id
         json.url link.url 
