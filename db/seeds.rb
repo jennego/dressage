@@ -4,7 +4,7 @@ wtA_test = DressageTest.create({
   level: 'Walk/Trot',
   name: 'A',
   year: 2009,
-  current: true,
+  current: false,
   moves_attributes:[
   { letter: 'A', move: 'Enter at working trot rising'},
   { letter: 'X', move: 'Halt through walk. Salute and proceed at working trot rising '},
@@ -33,7 +33,7 @@ wtB_test = DressageTest.create({
   level: 'Walk/Trot',
   name: 'B',
   year: 2010,
-  current: 'true',
+  current: 'false',
   moves_attributes:[
   { letter: 'A', move: 'Enter at working trot rising'},
   { letter: 'X', move: 'Halt through walk. Salute and proceed at working trot rising '},
@@ -65,7 +65,7 @@ wtC_test = DressageTest.create({
   level: 'Walk/Trot',
   name: 'C',
   year: 2010,
-  current: true,
+  current: false,
   moves_attributes:[
   { letter: 'A', move: 'Enter at working trot'},
   { letter: 'X', move: 'Halt. Salute and proceed at working trot'},
@@ -94,7 +94,7 @@ wtD_test = DressageTest.create({
   level: 'Walk/Trot',
   name: 'D',
   year: 2010,
-  current: true,
+  current: false,
   moves_attributes:[
   { letter: 'A', move: 'Enter at working trot'},
   { letter: 'X', move: 'Halt. Salute and proceed at working trot'},
@@ -127,7 +127,7 @@ train1_test = DressageTest.create({
   level: 'Training',
   name: '1',
   year: 2015,
-  current: true,
+  current: false,
   note: 'All trot work may be ridden sitting or rising, unless stated.
   Halts may be through the walk',
   purpose: 'To confirm that the horse demonstrates correct basics, is supple and moves freely
@@ -163,7 +163,7 @@ train2_test = DressageTest.create({
   level: 'Training',
   name: '2',
   year: 2015,
-  current: true,
+  current: false,
   note: 'All trot work may be ridden sitting or rising, unless stated.
   Halts may be through the walk',
   purpose: 'To confirm that the horse demonstrates correct basics, is supple and moves freely
@@ -206,7 +206,7 @@ train3_test = DressageTest.create({
   level: 'Training',
   name: '3',
   year: 2015,
-  current: true,
+  current: false,
   note: 'All trot work may be ridden sitting or rising, unless stated.
   Halts may be through the walk',
   purpose: 'To confirm that the horse demonstrates correct basics, is supple and moves freely
@@ -248,7 +248,7 @@ first1_test = DressageTest.create({
   level: 'First',
   name: '1',
   year: 2015,
-  current: true,
+  current: false,
   note: 'All trot work may be ridden sitting or rising, unless stated.
   Halts may be through the walk',
   purpose: 'To confirm that the horse demonstrates correct basics, and in addition to the
