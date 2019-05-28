@@ -39,7 +39,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'jquery-rails'
 gem 'bootstrap', '~> 4.1.2'
 gem 'simple_form'
-gem 'devise'
+gem "devise", ">= 4.6.0"
 gem 'friendly_id'
 gem "cocoon"
 gem 'pg_search'
