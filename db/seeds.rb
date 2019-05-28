@@ -294,3 +294,128 @@ links_attributes: [
 
 first1_test.save!
 
+
+train1_2019_test = DressageTest.create({
+  org_name: 'United Stakes Equestrian Federation / Equestrian Canada',
+  level: 'Training',
+  name: '1',
+  year: 2019,
+  current: true,
+  note: 'All trot work may be ridden sitting or rising, unless stated.
+  Halts may be through the walk. No changes from 2015.',
+  purpose: 'To confirm that the horse demonstrates correct basics, is supple and moves freely
+  forward in a clear rhythm with a steady tempo, accepting contact with the bit.',
+  introduce:'Working trot; working canter; medium walk; free walk; 20m circles in trot and canter',
+  moves_attributes:[
+  { letter: 'A', move: 'Enter at working trot'},
+  { letter: 'X', move: 'Halt. Salute and proceed at working trot'},
+  { letter: 'C', move: 'Track left'},
+  { letter: 'E', move: 'Cirle left 20m'},
+  { letter: 'A', move: 'Circle left 20m developing left lead canter in first quarter of circle '},
+  { letter: 'A-F-B', move: 'Working canter '},
+  { letter: 'Between B & M', move: 'Working trot'},
+  { letter: 'C', move: 'Medium walk'},
+  { letter: 'A', move: 'Working trot'},
+  { letter: 'E', move: 'Circle right 20m'},
+  { letter: 'C', move: 'Circle right 20m developing right lead canter in first quarter of circle '},
+  { letter: 'C-M-B', move: 'Working canter'},
+  { letter: 'Between B & F', move: 'Working trot'},
+  { letter: 'A', move: 'Down centerline'},
+  { letter: 'X', move: 'Halt, salute'}
+],
+links_attributes: [
+  {url:'https://www.equestrian.ca/cdn/storage/resources_v2/4bwJuhhaFLbfJ6dGQ/original/4bwJuhhaFLbfJ6dGQ.pdf' , linkname: 'Equestrian Canada PDF'},
+  {url:'https://www.usef.org/forms-pubs/9hJaeud1GVo/2015-training-level-test-1' , linkname: 'United States Equestrian Federation PDF'}
+]
+})
+
+train1_2019_test.save!
+
+
+train2_2019_test = DressageTest.create({
+  org_name: 'United Stakes Equestrian Federation / Equestrian Canada',
+  level: 'Training',
+  name: '2',
+  year: 2019,
+  current: true,
+  note: 'All trot work may be ridden sitting or rising, unless stated.
+  Halts may be through the walk. Essentially same test as 2015 with minor phrasing changes.',
+  purpose: 'To confirm that the horse demonstrates correct basics, is supple and moves freely
+  forward in a clear rhythm with a steady tempo, accepting contact with the bit.',
+  introduce:'Stretch circle in trot',
+  moves_attributes:[
+  { letter: 'A', move: 'Enter at working trot'},
+  { letter: 'X', move: 'Halt. Salute and proceed at working trot'},
+  { letter: 'C', move: 'Track right'},
+  { letter: 'B', move: 'Cirle right 20m'},
+  { letter: 'K X M', move: 'Change rein'},
+  { letter: 'Between C & H', move: 'Working canter left lead'},
+  { letter: 'E', move: 'Circle left 20m'},
+  { letter: 'Between E & K', move: 'Working trot'},
+  { letter: 'A', move: 'Circle left 20m rising trot, allowing the horse to stretch forward and downward '},
+  { letter: 'Before A', move: 'Shorten reins'},
+  { letter: 'A', move: 'Working trot'},
+  { letter: 'F', move: 'Medium Walk'},
+  { letter: 'F-E', move: 'Change rein, medium walk'},
+  { letter: 'E-M', move: 'Change rein, free walk'},
+  { letter: 'M', move: 'Medium walk'},
+  { letter: 'C', move: 'Working trot'},
+  { letter: 'E', move: 'Circle left 20m'},
+  { letter: 'F-X-H', move: 'Change rein'},
+  { letter: 'Between C & M', move: 'Working canter, right lead'},
+  { letter: 'B', move: 'Circle right 20m'},
+  { letter: 'Between B & F', move: 'Working trot'},
+  { letter: 'A', move: 'Down centerline'},
+  { letter: 'X', move: 'Halt, salute.'}
+],
+links_attributes: [
+  {url:'https://www.equestrian.ca/sport/dressage/tests' , linkname: 'Equestrian Canada'},
+  {url:'https://www.usef.org/forms-pubs/IjbJzrNV42s/2015-training-level-test-2' , linkname: 'United States Equestrian Federation PDF'}
+]
+})
+
+train2_2019_test.save!
+
+train3_test = DressageTest.create({
+  org_name: 'United Stakes Equestrian Federation / Equestrian Canada',
+  level: 'Training',
+  name: '3',
+  year: 2015,
+  current: false,
+  note: 'All trot work may be ridden sitting or rising, unless stated.
+  Halts may be through the walk. NOTE: Sighificant changes from 2015 test, completely new test. ',
+  purpose: 'To confirm that the horse demonstrates correct basics, is supple and moves freely
+  forward in a clear rhythm with a steady tempo, accepting contact with the bit.',
+  introduce:'Serprentine in trot',
+  moves_attributes:[
+  { letter: 'A', move: 'Enter at working trot'},
+  { letter: 'X', move: 'Halt. Salute and proceed at working trot'},
+  { letter: 'C', move: 'Track left'},
+  { letter: 'H-X-F', move: 'Change rein'},
+  { letter: 'A-C', move: 'Serpentine 3 equal loops width of the arena'},
+  { letter: 'Between C & M', move: 'Working canter right lead'},
+  { letter: 'B', move: 'Circle right 20m'},
+  { letter: 'A', move: 'Working trot'},
+  { letter: 'Before K', move: 'Medium walk '},
+  { letter: 'K-E', move: 'Medium walk'},
+  { letter: 'E-M', move: 'Change rein, free walk'},
+  { letter: 'M', move: 'Medium walk'},
+  { letter: 'C', move: 'Working trot'},
+  { letter: 'C-A', move: 'Serpentine 3 equal loops width of the arena'},
+  { letter: 'Between A-F', move: 'Working canter left lead'},
+  { letter: 'B', move: 'Circle right 20m'},
+  { letter: 'C', move: 'Working trot'},
+  { letter: 'E', move: 'Circle left 20m in rising trot, allowing horse to stretch
+    forward and downward, while maintaining contact'},
+  { letter: 'Before E', move: 'Shorten the reins'},
+  { letter: 'E', move: 'Shorten the reins'},
+  { letter: 'A', move: 'Down centerline'},
+  { letter: 'X', move: 'Halt, salute.'}
+],
+links_attributes: [
+  {url:'https://www.equestrian.ca/cdn/storage/resources_v2/pF5S4yxTeFEu9xFYA/original/pF5S4yxTeFEu9xFYA.pdf' , linkname: 'Equestrian Canada PDF'},
+  {url:'https://www.usef.org/forms-pubs/OidZ9HCj3Fs/2015-training-level-test-3' , linkname: 'United States Equestrian Federation PDF'}
+]
+})
+
+train3_test.save!
