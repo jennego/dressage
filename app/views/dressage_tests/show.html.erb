@@ -13,7 +13,7 @@
       <i class="fas fa-exclamation-triangle"></i>
         <h3 class="text-danger"> Whoa! According to <%=@dressage_test.org_name%>, this is an outdated test. </h3>
         <p> Check with your show organizer to make sure you have the correct test. </p>
-        <p> Search for a current version of this test </p> 
+        <%= link_to  "Go back to test page", dressage_tests_path%>
       </div> 
 
       <% end %>
