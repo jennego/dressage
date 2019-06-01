@@ -13,7 +13,6 @@
 
 //= require jquery
 
-//= require jquery_ujs
 //= require jquery-ui/widgets/autocomplete
 //= require filterrific/filterrific-jquery
 //= require autocomplete-rails
@@ -64,8 +63,9 @@ $( document ).ready(function() {
       $('.cta-open').on('click', function() {
         $('.toggle-arena, .formwrap, .toggle-bg').addClass('active');
         $('.icon-close').addClass('open');
+        console.log('open dresage arena')
     });
-	 $('.icon-close').on('click', function() {
+	$('.icon-close').on('click', function() {
         $('.toggle-arena, .formwrap, .toggle-bg').removeClass('active');
         $('.icon-close').removeClass('open');
     });
