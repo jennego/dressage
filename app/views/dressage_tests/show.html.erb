@@ -27,7 +27,7 @@
           </tr>
         </thead>
         <tbody>
-            <% @dressage_test.moves.each do |d| %>
+            <% @dressage_test.moves.reverse.each do |d| %>
             <tr>
             <td class="letter-col"> <div class="letter"><%= d.letter %> </td>
             <td class="move-col"> <%= d.move %> </td>
