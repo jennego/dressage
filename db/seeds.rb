@@ -1,4 +1,6 @@
 
+DressageTest.destroy_all
+
 wtA_test = DressageTest.create({
   org_name: 'Equestrian Canada',
   level: 'Walk/Trot',
@@ -315,6 +317,8 @@ train1_2019_test = DressageTest.create({
   { letter: 'A-F-B', move: 'Working canter '},
   { letter: 'Between B & M', move: 'Working trot'},
   { letter: 'C', move: 'Medium walk'},
+  { letter: 'F-E', move: 'Change rein, free walk'},
+  { letter: 'F', move: 'Medium walk'},
   { letter: 'A', move: 'Working trot'},
   { letter: 'E', move: 'Circle right 20m'},
   { letter: 'C', move: 'Circle right 20m developing right lead canter in first quarter of circle '},
