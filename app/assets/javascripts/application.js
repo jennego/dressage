@@ -25,54 +25,51 @@
 //= require activestorage
 //= require_tree .
 
-$(document).ready(function() {
-
-$("#d").select2({
-   ajax: {
-    url: 'http://localhost:3000/dressage_tests.json',
-    dataType: 'json',
-    processResults: function(data) {
-      return {
-        id: data.id,
-        year: data.year,
-        name: data.name,
-        level: data.level
-      }
-    }
-  }
-});
+$(document).ready(function () {
+  $("#d").select2({
+    ajax: {
+      url: "http://localhost:3000/dressage_tests.json",
+      dataType: "json",
+      processResults: function (data) {
+        return {
+          id: data.id,
+          year: data.year,
+          name: data.name,
+          level: data.level,
+        };
+      },
+    },
+  });
 
   // $("input[data-autocomplete]").each ->
   //   url = $(this).data('autocomplete')
   //   $(this).autocomplete
   //     source: url
   //
-
-    })
+});
 
 function on() {
   document.getElementById("overlay").style.display = "block";
-  console.log("I work")
+  console.log("I work");
 }
 
 function off() {
   document.getElementById("overlay").style.display = "none";
 }
 
-$( document ).ready(function() {
-      $('.cta-open').on('click', function() {
-        $('.toggle-arena, .formwrap, .toggle-bg').addClass('active');
-        $('.icon-close').addClass('open');
-        console.log('open dresage arena')
-    });
-	$('.icon-close').on('click', function() {
-        $('.toggle-arena, .formwrap, .toggle-bg').removeClass('active');
-        $('.icon-close').removeClass('open');
-    });
+$(document).ready(function () {
+  $(".cta-open").on("click", function () {
+    $(".toggle-arena, .formwrap, .toggle-bg").addClass("active");
+    $(".icon-close").addClass("open");
+    console.log("open dresage arena");
+  });
+  $(".icon-close").on("click", function () {
+    $(".toggle-arena, .formwrap, .toggle-bg").removeClass("active");
+    $(".icon-close").removeClass("open");
+  });
 });
 
-$('#myTab a').on('click', function (e) {
-  e.preventDefault()
-  $(this).tab('show')
-})
-
+$("#myTab a").on("click", function (e) {
+  e.preventDefault();
+  $(this).tab("show");
+});
