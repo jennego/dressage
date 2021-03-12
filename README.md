@@ -2,17 +2,32 @@
 
 Current to-do
 
-Upgrade to Rails 6
-Make sure all API functions work
-OAuth
-Change to serve admin functions only
+Rails
 
-Upgrade SPA to current React
-Classes to Functions
-Improve Filtering
-OAuth from frontend
+- Upgrade to Rails 6 - yes
+- Make sure all API functions work
+- Secure API
+- GraphQL?
+- OAuth
+- Eventually change to serve admin functions only
+- Remove unneeded stuff
 
----
+SPA
+
+- Upgrade SPA to current React
+- Classes to Functions
+- Improve Filtering
+- OAuth from frontend
+- Integrate/Embed Arena drawing app (Canvas? Phaser?)
+- add sharing
+
+New features (both)
+
+- Add User and Admin roles
+- Users can favorite tests
+- Admin can do all users can do, plus add tests
+
+## Working version (2018)
 
 https://dressage-tests.herokuapp.com/
 2019 training and first level now deployed!
@@ -30,8 +45,6 @@ Don't go around studying the wrong test!!
 This app runs on Ruby on Rails with postgreSQL, using bootstrap and filterific.
 
 EC/USEF tests only for now. Others may be added on request as well (send them to me and let me know where to find them!)
-
-To do
 
 - fix sql security issues - look into active record queries
 - home page - search only until search or show all or show all current
