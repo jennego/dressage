@@ -1,7 +1,4 @@
-
-
 {
   "name": "dressageapp",
-  "private": true,
-  "dependencies": {}
+  "private": true
 }
