@@ -1,4 +1,13 @@
-  json.id @test.id
+ def shortname(name)
+shortname = []
+name.split(' ').each do |s|
+   shortname.push(s[0])
+end
+return shortname.join()
+end
+
+ 
+ json.id @test.id
   json.year @test.year
   json.orgname @test.org_name
   json.level @test.level
@@ -8,7 +17,7 @@
   json.purpose @test.purpose
   json.note @test.note
   json.current @test.current
-  json.full_name @test.org_name + ' ' + @test.year.to_s + ' ' + @test.level + ' ' + @test.name 
+  json.full_name shortname(@test.org_name) + ' ' + @test.year.to_s + ' ' + @test.level + ' ' + @test.name 
     json.links @test.links.each do |link| 
         json.linkid link.id
         json.url link.url 

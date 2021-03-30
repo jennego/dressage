@@ -53,6 +53,7 @@ gem 'will_paginate'
 gem 'carrierwave'
 gem 'rack-cors'
 gem 'jwt'
+gem "algoliasearch-rails"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -69,6 +70,8 @@ group :development do
   gem 'pry'
   gem 'pry-rails'
   gem 'hirb'
+  gem 'solargraph'
+
 end
 
 
