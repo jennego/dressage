@@ -17,7 +17,7 @@ json.dressage_tests @dressage_tests do |d|
   json.purpose d.purpose
   json.note d.note
   json.current d.current
-  json.full_name shortname(d.org_name) + ' ' + d.year.to_s + ' ' + d.level 
+  json.full_name shortname(d.org_name) + ' ' + d.year.to_s + ' ' + d.level + ' ' + d.name
   
 end
 
