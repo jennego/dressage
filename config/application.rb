@@ -31,6 +31,8 @@ module Dressageapp
     config.autoload_paths += %W( lib/ )
     config.generators.system_tests = nil
     config.middleware.use ActionDispatch::Cookies
+    config.assets.initialize_on_precompile = false
+
 
   end
 end
