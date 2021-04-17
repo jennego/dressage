@@ -12,6 +12,20 @@ class DressageTest < ApplicationRecord
     # Use all default configuration
   end
 
+  def self.order_by_level 
+  DressageTest.order(
+  Arel.sql(<<-SQL.squish
+      CASE 
+          WHEN level = 'Walk/Trot' THEN '1'
+          WHEN level = 'Intro' THEN '2'
+          WHEN level = 'Training' THEN '3'
+          WHEN level = 'First' THEN '4'
+          END ASC, name asc;
+      SQL
+    )
+  )
+  end
+
 #   def shortname(name)
 # shortname = []
 # name.split(' ').each do |s|

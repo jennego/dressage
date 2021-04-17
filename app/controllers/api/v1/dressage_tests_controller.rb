@@ -1,7 +1,8 @@
 class Api::V1::DressageTestsController < Api::BaseController
 
   def index
-    @dressage_tests = DressageTest.order(created_at: :desc).limit(20)
+    # @dressage_tests = DressageTest.order(created_at: :desc).limit(20)
+    @dressage_tests = DressageTest.order_by_level
     # this will render views/api/v1/index.json.jbuilder
   end
 
