@@ -23,7 +23,8 @@ end
         json.url link.url 
         json.linkname link.linkname 
     end
-    json.moves @test.moves.each do |move| 
+
+    json.moves @test.moves.order('id ASC').each do |move| 
         json.moveid move.id
         json.letter move.letter
         json.movement move.move 
