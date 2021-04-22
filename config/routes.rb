@@ -5,8 +5,6 @@ resources :dressage_tests
  get '/about', to: 'welcome#about'
  root 'welcome#index'
  devise_for :users
- resources :dressage_tests, only: [:index, :show, :create, :update, :destroy]
-
 
 
 
