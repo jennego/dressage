@@ -1,105 +1,10 @@
-
-
 <div class="container">
 
-<%#
-  Filterrific adds the `form_for_filterrific` view helper:
-  * adds dom id 'filterrific_filter'
-  * applies javascript behaviors:
-      * AJAX form submission on change
-      * AJAX spinner while AJAX request is being processed
-  * sets form_for options like :url, :method and input name prefix
-%>
+  <%= link_to "New", new_dressage_test_path, class: "btn btn-primary" %>
 
-<%= form_for_filterrific @filterrific,  html: { id: 'filterrific-no-ajax-auto-submit' , class:'filter-form'}  do |f|%>
-  <div class="form-group">
-    Search
-    <%# give the search field the 'filterrific-periodically-observed' class for live updates %>
-    <%= f.text_field(
-      :search_query,
-      class: 'form-control'
-    ) %>
-  </div>
-  <div class="row"> 
-    <div class="col">
-      <div class="form-group">
-        Sorted by
-        <%= f.select(:sorted_by, @filterrific.select_options[:sorted_by],{}, {:class => 'form-control'}) %>
-      </div>
-    </div>
-    <div class="col">
-      <div class="form-group">
-      Level
-          <%= f.select(
-          :filter_by_level,
-          @filterrific.select_options[:filter_by_level], 
-          { include_blank: '- Any -' },
-          {class: 'form-control'} 
-          ) %>
-      </div>
-    </div> 
-    
-      <div class="col-3">
-        <div class="form-group">    
-        Current  
-          <%= f.select(
-          :current_filter,
-          @filterrific.select_options[:current_filter], 
-          { include_blank: 'All' },
-          {class: 'form-control'} 
-          ) %>
-        </div>
-      </div>
-    
-  </div>
-  <div class="row">
-      <div class="col">
-      Filter by Year
-        <%= f.select(
-          :filter_by_year,
-          @filterrific.select_options[:filter_by_year], 
-          { include_blank: '- Any -' },
-          {class: 'form-control'} 
-          ) %>
-      </div>
-    <div class="col">
-    Filter by Org
-      <%= f.select(
-          :filter_by_org_name,
-          @filterrific.select_options[:filter_by_org_name], 
-          { include_blank: '- Any -' },
-          {class: 'form-control'} 
-          ) %>
-      </div>
 
-  </div>
-  <div class="form-group">
-    <%= link_to(
-      'Reset filters',
-      reset_filterrific_url,
-      class: "btn btn-danger" 
-    ) %>
-  <%= f.submit 'Filter', class: "btn btn-primary" %>
-  </div>
-
-<% end %>
-
-<%= render(
+  <%= render(
   partial: 'dressage_tests/list',
   locals: { dressage_tests: @dressage_tests }
 ) %>
-
-<% if false %>
-  <% if params[:filterrific][:filter_by_level].blank?%> 
-  All levels 
-  <% else %> 
-    <%= params[:filterrific][:filter_by_level] %>
-  <% end %>
-<% end %>
-
 </div>
-
-</div>
-
-
-

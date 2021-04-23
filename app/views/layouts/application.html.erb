@@ -1,80 +1,85 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Dressageapp</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all' %>
-    <%= javascript_include_tag 'application' %>
-    <%= favicon_link_tag asset_path('favicon.png') %>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
+<head>
+  <title>Dressageapp</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-    <body class="<%= controller_name %> <%= action_name %>"> <body class="<%= controller_name %> <%= action_name %>">
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= favicon_link_tag asset_path('favicon.png') %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body class="<%= controller_name %> <%= action_name %>">
+
+  <body class="<%= controller_name %> <%= action_name %>">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">Dressage tests</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+      <a class="navbar-brand" href="#">Dressage tests</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <%= link_to 'Home', root_path, class: 'nav-link' %>
-      </li>
-        <li class="nav-item">
-          <%= link_to 'About', about_path, class: 'nav-link' %>
-        </li>
-      <li class="nav-item">
-        <a class="nav-link cta-open"> Arena </a>
-      </li>
-    </ul>
-    <ul class="navbar-nav">
-      <% if user_signed_in? %>
-      <li> <%= link_to 'Sign Out', destroy_user_session_path, :method => :delete, class: 'nav-link text-white' %> </li>
-      <% else %>
-      <li> <%= link_to 'Sign In', user_session_path, class: 'nav-link text-white' %> </li>
-      <% end %>
-    </ul>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <%= link_to 'Home', root_path, class: 'nav-link' %>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'About', about_path, class: 'nav-link' %>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'Tests', dressage_tests_path, class: 'nav-link' %>
 
-  </div>
-</nav>
+          </li>
+        </ul>
+        <ul class="navbar-nav">
+          <% if user_signed_in? %>
+          <li> <%= link_to 'Sign Out', destroy_user_session_path, :method => :delete, class: 'nav-link text-white' %> </li>
+          <% else %>
+          <li> <%= link_to 'Sign In', user_session_path, class: 'nav-link text-white' %> </li>
+          <% end %>
+        </ul>
+
+      </div>
+    </nav>
 
 
 
     <div class="container-fluid">
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
-    <%= yield %>
+      <%= yield %>
     </div>
 
     <section class="toggle-arena">
-  <div class="formwrap px-4">
-    <div class="icon-close pos-a"><img src="https://www.solodev.com/_/images/cross.png" alt="Close Button"></div>
-    <p class="text-white mt-4 h3">Arena Diagram</p>
+      <div class="formwrap px-4">
+        <div class="icon-close pos-a"><img src="https://www.solodev.com/_/images/cross.png" alt="Close Button"></div>
+        <p class="text-white mt-4 h3">Arena Diagram</p>
 
-<!-- Nav tabs -->
-<ul class="nav nav-tabs" id="myTab" role="tablist">
-  <li class="nav-item">
-    <a class="nav-link active" id="large-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Standard</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" id="small-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Small</a>
-  </li>
-</ul>
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="large-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Standard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="small-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Small</a>
+          </li>
+        </ul>
 
-<!-- Tab panes -->
-<div class="tab-content">
-  <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab"> 
-  <p class="text-white mt-2">20m x 60m Large Arena </p> 
-    <img class="arena2" height="420px" class="img-fluid" src="https://localriding.com/image-files/dressage-arena-lg.jpg" />
-  </div>
-  <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-   Small. No S, R, P or Vs. Diagram later. </div>
-</div>
-      
-  </div>
-<div class="toggle-bg"></div>
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <p class="text-white mt-2">20m x 60m Large Arena </p>
+            <img class="arena2" height="420px" class="img-fluid" src="https://localriding.com/image-files/dressage-arena-lg.jpg" />
+          </div>
+          <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+            Small. No S, R, P or Vs. Diagram later. </div>
+        </div>
+
+      </div>
+      <div class="toggle-bg"></div>
   </body>
+
 </html>

@@ -1,39 +1,41 @@
-<%= simple_form_for @dressage_test do |f| %>
+<div class="container">
+  <%= simple_form_for @dressage_test do |f| %>
   <%= f.input :org_name %>
   <%= f.input :name %>
   <%= f.input :level %>
   <%= f.input :year %>
   <%= f.input :note %>
 
-Add official links.
+  Add official links.
 
-<%= f.fields_for :links do |f| %>
-    <%= render 'link_fields', :f => f %>
-<% end %>
+  <%= f.fields_for :links do |f| %>
+  <%= render 'link_fields', :f => f %>
+  <% end %>
 
-<div class='links'>
-  <%= link_to_add_association 'add link', f, :links, class: "btn btn-dark" %>
-</div>
-
-
-<div class="form-group">
-
-<h2>Create Test</h2>
+  <div class='links'>
+    <%= link_to_add_association 'add link', f, :links, class: "btn btn-dark" %>
+  </div>
 
 
-<%= f.fields_for :moves do |f| %>
+  <div class="form-group">
+
+    <h2>Create Test</h2>
+
+
+    <%= f.fields_for :moves do |f| %>
     <%= render 'move_fields', :f => f %>
-<% end %>
+    <% end %>
 
-<div class='links'>
-  <%= link_to_add_association 'add dressage move', f, :moves, class: "btn btn-dark" %>
+    <div class='links'>
+      <%= link_to_add_association 'add dressage move', f, :moves, class: "btn btn-dark" %>
+    </div>
+
+  </div>
+
+  <hr>
+
+
+  <%= f.submit class: 'btn btn-primary' %>
+
+  <% end %>
 </div>
-
-</div>
-
-<hr>
-
-
-<%= f.submit class: 'btn btn-primary' %>
-
-<% end %>

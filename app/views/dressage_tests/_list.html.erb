@@ -2,7 +2,7 @@
 
 
 
-  <table class='table table-hover test-table table-responsive'>
+  <table class='table table-hover test-table'>
     <thead class='thead-light'>
       <tr>
         <th>Year</th>
@@ -10,24 +10,27 @@
         <th>Level</th>
         <th>Test</th>
         <th>Current</th>
+        <th> </th>
+        <td>
+          </th>
       </tr>
     </thead>
     <% dressage_tests.each do |d| %>
-    <% if d.current == true %> 
-    <tr>
-    <% else %>
-    <tr class="table-danger">
-    <% end %> 
-    
-        <td>  <%= link_to (dressage_test_path(d)) do %> <%= d.year %> <%end%> </td>
-        <td>  <%= link_to (dressage_test_path(d)) do %> <%= d.org_name %> <% end %> </td>
-        <td>  <%= link_to (dressage_test_path(d)) do %> <%= d.level %> <% end %> </td>
-        <td>  <%= link_to (dressage_test_path(d)) do %> <%= d.name %> <% end %> </td>
-        <td>  <%= link_to (dressage_test_path(d)) do %>  <%= d.current == true ? ('Yes') : ('No') %>  
-        <% end %> </td> 
-      </tr>
+    <% if d.current == true %>
+    <tr class="table-success">
+      <% else %>
+    <tr class="table-warning">
+      <% end %>
+
+      <td> <%= link_to (dressage_test_path(d)) do %> <%= d.year %> <%end%> </td>
+      <td> <%= link_to (dressage_test_path(d)) do %> <%= d.org_name %> <% end %> </td>
+      <td> <%= link_to (dressage_test_path(d)) do %> <%= d.level %> <% end %> </td>
+      <td> <%= link_to (dressage_test_path(d)) do %> <%= d.name %> <% end %> </td>
+      <td> <%= link_to (dressage_test_path(d)) do %> <%= d.current == true ? ('Yes') : ('No') %>
+        <% end %> </td>
+      <td> <%= link_to (edit_dressage_test_path(d)) do %> Edit <%end %> </td>
+      <td> Delete </td>
+    </tr>
     <% end %>
   </table>
 </div>
-
-<%= will_paginate @dressage_tests %>
