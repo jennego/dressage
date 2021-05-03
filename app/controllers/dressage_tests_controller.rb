@@ -1,11 +1,8 @@
 class DressageTestsController < ApplicationController
-  autocomplete :dressage_tests, :name, :extra_data => [:year, :level, :org_name]
    before_action :authenticate_user!, except: [:show, :index ]
 
 def index
- 
    @dressage_tests = DressageTest.order_by_level
-   
 end
 
 def new
