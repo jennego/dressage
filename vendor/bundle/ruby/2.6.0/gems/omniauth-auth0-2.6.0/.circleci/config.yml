@@ -1,0 +1,44 @@
+version: 2.1
+matrix_rubyversions: &matrix_rubyversions
+  matrix:
+    parameters:
+      rubyversion: ["2.5", "2.6", "2.7", "3.0"]
+# Default version of ruby to use for lint and publishing
+default_rubyversion: &default_rubyversion "2.7"
+
+executors:
+  ruby:
+    parameters:
+      rubyversion:
+        type: string
+        default: *default_rubyversion
+    docker:
+      - image: circleci/ruby:<< parameters.rubyversion >>
+
+jobs:
+  run-tests:
+    parameters:
+      rubyversion:
+        type: string
+        default: *default_rubyversion
+    executor:
+      name: ruby
+      rubyversion: "<< parameters.rubyversion >>"
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - gems-v2-{{ checksum "Gemfile" }}
+            - gems-v2-
+      - run: bundle check || bundle install
+      - save_cache:
+          key: gems-v2--{{ checksum "Gemfile" }}
+          paths:
+            - vendor/bundle
+      - run: bundle exec rake spec
+
+workflows:
+  tests:
+    jobs:
+      - run-tests:
+          <<: *matrix_rubyversions
