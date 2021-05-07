@@ -1,5 +1,4 @@
-class DashboardController < ApplicationController
-  include Secured
+class DashboardController < SecuredController
 
   def index
     # session[:userinfo] was saved earlier on Auth0Controller#callback

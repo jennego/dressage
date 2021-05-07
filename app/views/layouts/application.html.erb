@@ -35,11 +35,14 @@
           </li>
         </ul>
         <ul class="navbar-nav">
-          <% if user_signed_in? %>
-          <li> <%= link_to 'Sign Out', destroy_user_session_path, :method => :delete, class: 'nav-link text-white' %> </li>
+
+          <% if session[:userinfo].present? %>
+          <li> <%= button_to 'Logout', 'auth/logout', method: :get,  class: "btn btn-danger"  %>
+          </li>
           <% else %>
-          <li> <%= link_to 'Sign In', user_session_path, class: 'nav-link text-white' %> </li>
+          <li> <%= button_to 'Login', 'auth/auth0', method: :post,  class: "btn btn-primary"  %> </li>
           <% end %>
+
         </ul>
 
       </div>
@@ -48,38 +51,17 @@
 
 
     <div class="container-fluid">
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
+
+      <% flash.each do |type, msg| %>
+      <div class="alert alert-warning">
+        <%= msg %>
+      </div>
+      <% end %>
+
+
       <%= yield %>
     </div>
 
-    <section class="toggle-arena">
-      <div class="formwrap px-4">
-        <div class="icon-close pos-a"><img src="https://www.solodev.com/_/images/cross.png" alt="Close Button"></div>
-        <p class="text-white mt-4 h3">Arena Diagram</p>
-
-        <!-- Nav tabs -->
-        <ul class="nav nav-tabs" id="myTab" role="tablist">
-          <li class="nav-item">
-            <a class="nav-link active" id="large-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Standard</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" id="small-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Small</a>
-          </li>
-        </ul>
-
-        <!-- Tab panes -->
-        <div class="tab-content">
-          <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
-            <p class="text-white mt-2">20m x 60m Large Arena </p>
-            <img class="arena2" height="420px" class="img-fluid" src="https://localriding.com/image-files/dressage-arena-lg.jpg" />
-          </div>
-          <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-            Small. No S, R, P or Vs. Diagram later. </div>
-        </div>
-
-      </div>
-      <div class="toggle-bg"></div>
   </body>
 
 </html>

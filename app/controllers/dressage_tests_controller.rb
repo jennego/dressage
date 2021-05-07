@@ -1,5 +1,6 @@
-class DressageTestsController < ApplicationController
-   before_action :authenticate_user!, except: [:show, :index ]
+class DressageTestsController < SecuredController
+
+  skip_before_action :logged_in_using_omniauth?, only: [:index, :show]
 
 def index
    @dressage_tests = DressageTest.order_by_level
