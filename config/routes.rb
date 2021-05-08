@@ -17,7 +17,6 @@ resources :dashboard, only: [:show, :index]
 namespace :api, defaults: { format: :json } do
     namespace :v1 do
       resources :dressage_tests, only: [:index, :show, :create, :update, :destroy]
-      resources :tokens, only: [:create]
       end
   end
 
