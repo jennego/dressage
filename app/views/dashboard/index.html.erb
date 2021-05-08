@@ -2,4 +2,15 @@
 
 <h2> Your user id is <%= @user['sub']%> </h2>
 
+<% if admin_user_logged_in? %>
+<p> Admin user is logged in!</p>
+<% end %>
+
+
+<h2> User Roles:
+  <% @user['https://dressage-tests.herokuapp.com/roles'].each do |item| %>
+  <%= item %>
+  <%end%>
+</h2>
+
 <p> This is your info <%= @user %> </p>

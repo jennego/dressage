@@ -5,4 +5,8 @@ class DashboardController < SecuredController
     @user = session[:userinfo]
     print @user
   end
+
+  def joinus
+    @user = session[:userinfo]
+  end
 end
