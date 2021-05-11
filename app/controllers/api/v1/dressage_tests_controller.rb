@@ -1,4 +1,7 @@
-class Api::V1::DressageTestsController < Api::SecuredApiController
+class Api::V1::DressageTestsController < ApplicationController
+
+  include Secured
+    skip_before_action :authenticate_request!, only: [:index, :show]
 
   def index
     # @dressage_tests = DressageTest.order(created_at: :desc).limit(20)
