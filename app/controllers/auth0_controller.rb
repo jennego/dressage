@@ -9,8 +9,6 @@ class Auth0Controller < ApplicationController
     session[:userinfo] = auth_info['extra']['raw_info']
 
     auth_id = session[:userinfo]['sub']
-
-    print request.env
   
     # Redirect to the URL you want after successful auth
     redirect_to '/dashboard'
