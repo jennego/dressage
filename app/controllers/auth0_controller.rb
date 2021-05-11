@@ -15,7 +15,7 @@ class Auth0Controller < ApplicationController
     # Redirect to the URL you want after successful auth
     redirect_to '/dashboard'
 
-    User.find_by_auth0_id(auth_id)
+    # User.find_by_auth0_id(auth_id)
 
     # if User.find_by_auth0_id(auth_id) === nill 
     #   User.create({auth0_id: auth_id})
