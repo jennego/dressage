@@ -5,6 +5,7 @@ class DressageTest < ApplicationRecord
 
   accepts_nested_attributes_for :moves
   accepts_nested_attributes_for :links
+  accepts_nested_attributes_for :test_links
 
   validates_presence_of :name, :level, :org_name
 

@@ -1,7 +1,7 @@
 class DressageTestsController < SecuredController
 
-    before_action :admin_logged_in_using_omniauth?
-    skip_before_action :admin_logged_in_using_omniauth?, only: [:index, :show]
+    # before_action :admin_logged_in_using_omniauth?
+    # skip_before_action :admin_logged_in_using_omniauth?, only: [:index, :show]
 
 def index
    @dressage_tests = DressageTest.order_by_level
@@ -45,7 +45,7 @@ end
 
 
 def test_params
-  params.require(:dressage_test).permit(:notes, :name, :org_name, :level, :year, :subtitle, moves_attributes: [:id, :letter, :move, :_destroy], links_attributes: [:id, :url, :linkname, :_destroy])
+  params.require(:dressage_test).permit(:notes, :name, :org_name, :level, :year, :subtitle, moves_attributes: [:id, :letter, :move, :_destroy], links_attributes: [:id, :url, :linkname, :_destroy], test_links_attributes: [:id, :url, :name, :_destroy])
 end
 
   def find_test
