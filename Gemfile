@@ -56,6 +56,8 @@ gem 'jwt'
 gem "algoliasearch-rails"
 gem 'omniauth-auth0'
 gem 'omniauth-rails_csrf_protection'
+gem "auto_increment"
+
 
 
 group :development, :test do

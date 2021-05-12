@@ -4,17 +4,15 @@
     <h3> The Basics</h3>
     <div class="row">
       <div class="col">
-        <%= f.input :org_name %>
+        <%= f.input :org_name, class: "form-control" %>
         <%= f.input :name %>
       </div>
       <div class="col">
         <%= f.input :level %>
         <%= f.input :year %>
-        <%
-=begin%>
-        <%= f.input :select, :tag_value %>
-        <%
-=end%>
+        <%= f.input :current, input_html: { :checked => true } %>
+
+
       </div>
     </div>
     <div class="row">
@@ -26,6 +24,18 @@
     </div>
   </div>
 
+  <div class="bg-info text-light p-4">
+    <h2>Add Moves to test</h2>
+
+    <%= f.fields_for :moves do |f| %>
+    <%= render 'move_fields', :f => f %>
+    <% end %>
+
+    <div class='links'>
+      <%= link_to_add_association 'add dressage move', f, :moves, class: "btn btn-dark" %>
+    </div>
+
+  </div>
 
   <div class="bg-light p-4">
     <h3>Add PDF links </h3>
@@ -54,21 +64,8 @@
   </div>
 
 
-  <div class="form-group">
 
-    <div class="bg-info p-4">
-      <h2>Add Moves to test</h2>
 
-      <%= f.fields_for :moves do |f| %>
-      <%= render 'move_fields', :f => f %>
-      <% end %>
-
-      <div class='links'>
-        <%= link_to_add_association 'add dressage move', f, :moves, class: "btn btn-dark" %>
-      </div>
-
-    </div>
-  </div>
 
   <hr>
 

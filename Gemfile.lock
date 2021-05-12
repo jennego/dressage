@@ -69,6 +69,9 @@ GEM
       algoliasearch (>= 1.26.0, < 2.0.0)
       json (>= 1.5.1)
     ast (2.4.2)
+    auto_increment (1.5.2)
+      activerecord (>= 4.0)
+      activesupport (>= 4.0)
     autoprefixer-rails (10.2.4.0)
       execjs
     backport (1.1.2)
@@ -162,7 +165,7 @@ GEM
     method_source (1.0.0)
     mini_magick (4.11.0)
     mini_mime (1.0.3)
-    mini_portile2 (2.5.0)
+    mini_portile2 (2.5.1)
     minitest (5.14.4)
     msgpack (1.4.2)
     multi_json (1.15.0)
@@ -333,6 +336,7 @@ PLATFORMS
 
 DEPENDENCIES
   algoliasearch-rails
+  auto_increment
   bootsnap (>= 1.1.0)
   bootstrap
   byebug

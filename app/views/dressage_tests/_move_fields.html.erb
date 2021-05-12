@@ -1,13 +1,10 @@
 <div class="nested-fields">
 
+
   <div class="row">
-    <%
-=begin%>
     <div class="col-1">
-      <%= f.input :num, class: "disabled" %>
+      <%= f.input :num, label: "Order", input_html: { value: :f }%>
     </div>
-    <%
-=end%>
     <div class="col-3">
       <%= f.input :letter %>
     </div>
