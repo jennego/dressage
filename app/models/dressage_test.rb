@@ -3,9 +3,13 @@ class DressageTest < ApplicationRecord
   has_many :links, dependent: :destroy
   has_many :test_links, dependent: :destroy
 
+  alias_attribute :users, :favourites
+  has_and_belongs_to_many :favourites
+
   accepts_nested_attributes_for :moves
   accepts_nested_attributes_for :links
   accepts_nested_attributes_for :test_links
+
 
   validates_presence_of :name, :level, :org_name
 

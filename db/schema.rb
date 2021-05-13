@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_12_064331) do
+ActiveRecord::Schema.define(version: 2021_05_12_234045) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,14 +27,14 @@ ActiveRecord::Schema.define(version: 2021_05_12_064331) do
     t.string "introduce"
     t.string "purpose"
     t.boolean "current"
-    t.bigint "favourites_id"
-    t.index ["favourites_id"], name: "index_dressage_tests_on_favourites_id"
   end
 
   create_table "favourites", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id", null: false
+    t.bigint "dressage_tests_id", null: false
+    t.index ["dressage_tests_id"], name: "index_favourites_on_dressage_tests_id"
     t.index ["user_id"], name: "index_favourites_on_user_id"
   end
 
@@ -114,7 +114,7 @@ ActiveRecord::Schema.define(version: 2021_05_12_064331) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "dressage_tests", "favourites", column: "favourites_id"
+  add_foreign_key "favourites", "dressage_tests", column: "dressage_tests_id"
   add_foreign_key "favourites", "users"
   add_foreign_key "links", "dressage_tests"
   add_foreign_key "moves", "dressage_tests"
