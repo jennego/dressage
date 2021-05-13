@@ -1,7 +1,7 @@
 class User < ApplicationRecord
+  has_many :favourites, dependent: :destroy
+  has_many :dressage_tests, through: :favourites 
 
-  alias_attribute :dressage_test, :favourites
-   has_and_belongs_to_many :favourites
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
