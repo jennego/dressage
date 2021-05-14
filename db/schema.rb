@@ -31,11 +31,11 @@ ActiveRecord::Schema.define(version: 2021_05_12_235753) do
 
   create_table "favourites", force: :cascade do |t|
     t.bigint "dressage_test_id"
-    t.bigint "users_id"
+    t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["dressage_test_id"], name: "index_favourites_on_dressage_test_id"
-    t.index ["users_id"], name: "index_favourites_on_users_id"
+    t.index ["user_id"], name: "index_favourites_on_user_id"
   end
 
   create_table "links", force: :cascade do |t|
@@ -115,7 +115,7 @@ ActiveRecord::Schema.define(version: 2021_05_12_235753) do
   end
 
   add_foreign_key "favourites", "dressage_tests"
-  add_foreign_key "favourites", "users", column: "users_id"
+  add_foreign_key "favourites", "users"
   add_foreign_key "links", "dressage_tests"
   add_foreign_key "moves", "dressage_tests"
   add_foreign_key "oauth_access_tokens", "oauth_applications", column: "application_id"

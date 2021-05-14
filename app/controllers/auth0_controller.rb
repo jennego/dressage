@@ -1,6 +1,7 @@
 class Auth0Controller < ApplicationController
 # import active record user 
 
+
   def callback
     # OmniAuth stores the informatin returned from Auth0 and the IdP in request.env['omniauth.auth'].
     # In this code, you will pull the raw_info supplied from the id_token and assign it to the session.

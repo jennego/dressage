@@ -4,17 +4,21 @@
 
 
       <h3> <%= @dressage_test.org_name %> <%= @dressage_test.year %>
-      <%= @dressage_test.level %> <%= @dressage_test.name %> </h3>
-        
+        <%= @dressage_test.level %> <%= @dressage_test.name %> </h3>
+
+
+
+
+
 
       <% if @dressage_test.current == false %>
 
       <div class="border border-danger alert-light alert">
-      <i class="fas fa-exclamation-triangle"></i>
+        <i class="fas fa-exclamation-triangle"></i>
         <h3 class="text-danger"> Whoa! According to <%=@dressage_test.org_name%>, this is an outdated test. </h3>
         <p> Check with your show organizer to make sure you have the correct test. </p>
         <%= link_to  "Go back to test page", dressage_tests_path%>
-      </div> 
+      </div>
 
       <% end %>
 
@@ -27,41 +31,52 @@
           </tr>
         </thead>
         <tbody>
-            <% @dressage_test.moves.reverse.each do |d| %>
-            <tr>
-            <td class="letter-col"> <div class="letter"><%= d.letter %> </td>
+          <% @dressage_test.moves.reverse.each do |d| %>
+          <tr>
+            <td class="letter-col">
+              <div class="letter"><%= d.letter %>
+            </td>
             <td class="move-col"> <%= d.move %> </td>
           </tr>
-            <% end %>
+          <% end %>
         </tbody>
       </table>
     </div>
-  <div class="col-lg-4">
-  <% if @dressage_test.note.blank? == false %>
-    <h5 class="box-heading"> Notes </h5> 
-    <div class="border border-dark p-1">
-      <p> <em> <%= @dressage_test.note %> </em> </p>
-    </div>
-  <% end %> 
-  <% if @dressage_test.purpose.blank? == false %>
-  <h5 class="box-heading"> Purpose </h5> 
-    <div class="border border-dark p-1 pt-2">
-      <p><%= @dressage_test.purpose %> </p>
-    </div>
-  <% end %>
-  <% if @dressage_test.introduce.blank? == false %>
-  <h5 class="box-heading"> Introduce </h5> 
-    <div class="border border-dark p-1">
-      <p><%= @dressage_test.introduce %> </p>
-    </div>
-  <% end %>
+    <div class="col-lg-4">
+      <% if @dressage_test.note.blank? == false %>
+      <h5 class="box-heading"> Notes </h5>
+      <div class="border border-dark p-1">
+        <p> <em> <%= @dressage_test.note %> </em> </p>
+      </div>
+      <% end %>
+      <% if @dressage_test.purpose.blank? == false %>
+      <h5 class="box-heading"> Purpose </h5>
+      <div class="border border-dark p-1 pt-2">
+        <p><%= @dressage_test.purpose %> </p>
+      </div>
+      <% end %>
+      <% if @dressage_test.introduce.blank? == false %>
+      <h5 class="box-heading"> Introduce </h5>
+      <div class="border border-dark p-1">
+        <p><%= @dressage_test.introduce %> </p>
+      </div>
+      <% end %>
 
-    <h5> Links and Resources </h5>
-    <ul>
+      <h5> Links and Resources </h5>
+      <ul>
         <% @dressage_test&.links.each do |l| %>
         <li> <a href='<%= l.url %>'> <%= l.linkname %> </a> </li>
         <% end %>
-    </ul>
-</div>
-</div>
+      </ul>
+
+      <% if @favourite.present? %>
+
+
+      <%= link_to 'unlike', favourite_path(@favourite), method: :delete %>
+      <% else %>
+
+      <%= link_to 'favourite',    dressage_test_favourites_path(@dressage_test), method: :post %>
+      <% end %>
+    </div>
+  </div>
 </div>
