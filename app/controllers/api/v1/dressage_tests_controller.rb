@@ -1,4 +1,4 @@
-class Api::V1::DressageTestsController < ApplicationController
+class Api::V1::DressageTestsController < Api::BaseController
 
   include Secured
     skip_before_action :authenticate_request!, only: [:index, :show]
@@ -11,6 +11,12 @@ class Api::V1::DressageTestsController < ApplicationController
 
   def show
     @test = DressageTest.find params[:id]
+    auth0_id = params[:user]
+    @user = find_api_user_by_auth0_id(auth0_id)
+    @favourites =  @test.favourites.find_by_user_id @user
+
+    
+
     # Because we installed ActiveModel Serializer then the default behaviour is
     # to use the serializer instead of the default `to_json` method that comes
     # with ActiveRecrod

@@ -1,4 +1,9 @@
 class Api::BaseController < ApplicationController
+
+helper_method :find_api_user_by_auth0_id
+    def find_api_user_by_auth0_id(auth_id) 
+        return User.find_by_auth0_id(auth_id)
+  end
   
   # protect_from_forgery with: :null_session
   # include ActionController::Cookies 

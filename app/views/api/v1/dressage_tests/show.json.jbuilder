@@ -30,3 +30,7 @@ end
         json.movement move.move 
     end
 
+    if @user.present? 
+        json.is_faved @favourites.present?
+        json.favourites @favourites
+    end
