@@ -1,10 +1,8 @@
 class Api::V1::FavouritesController < Api::BaseController
 
-  # include Secured
+  include Secured
   before_action :get_current_user
   skip_before_action :verify_authenticity_token
-
-  helper_method :get_test_by_id
 
   def create 
     dressage_test = DressageTest.find params[:dressage_test_id]
