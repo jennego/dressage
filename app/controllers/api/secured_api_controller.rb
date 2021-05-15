@@ -3,7 +3,7 @@ class Api::SecuredApiController < ApplicationController
 
   def authenticate_request!
     auth_token
-    print auth_token
+    
   rescue JWT::VerificationError, JWT::DecodeError
     render json: { errors: ['Not Authenticated'] }, status: :unauthorized
   end

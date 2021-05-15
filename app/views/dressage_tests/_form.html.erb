@@ -1,26 +1,31 @@
 <div class="container">
   <%= simple_form_for @dressage_test do |f| %>
-  <%= f.input :org_name %>
-  <%= f.input :name %>
-  <%= f.input :level %>
-  <%= f.input :year %>
-  <%= f.input :note %>
+  <div class="bg-light p-4">
+    <h3> The Basics</h3>
+    <div class="row">
+      <div class="col">
+        <%= f.input :org_name, class: "form-control" %>
+        <%= f.input :name %>
+      </div>
+      <div class="col">
+        <%= f.input :level %>
+        <%= f.input :year %>
+        <%= f.input :current, input_html: { :checked => true } %>
 
-  Add official links.
 
-  <%= f.fields_for :links do |f| %>
-  <%= render 'link_fields', :f => f %>
-  <% end %>
-
-  <div class='links'>
-    <%= link_to_add_association 'add link', f, :links, class: "btn btn-dark" %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <%= f.input :introduce %>
+        <%= f.input :purpose %>
+        <%= f.input :note %>
+      </div>
+    </div>
   </div>
 
-
-  <div class="form-group">
-
-    <h2>Create Test</h2>
-
+  <div class="bg-info text-light p-4">
+    <h2>Add Moves to test</h2>
 
     <%= f.fields_for :moves do |f| %>
     <%= render 'move_fields', :f => f %>
@@ -31,6 +36,36 @@
     </div>
 
   </div>
+
+  <div class="bg-light p-4">
+    <h3>Add PDF links </h3>
+
+    <%= f.fields_for :test_links do |f| %>
+    <%= render 'test_link_fields', :f => f %>
+    <% end %>
+
+    <div class='links'>
+      <%= link_to_add_association 'add link', f, :test_links, class: "btn btn-dark" %>
+    </div>
+  </div>
+
+
+
+  <div class="bg-secondary p-4">
+    <h3>Add links </h3>
+
+    <%= f.fields_for :links do |f| %>
+    <%= render 'link_fields', :f => f %>
+    <% end %>
+
+    <div class='links'>
+      <%= link_to_add_association 'add link', f, :links, class: "btn btn-dark" %>
+    </div>
+  </div>
+
+
+
+
 
   <hr>
 

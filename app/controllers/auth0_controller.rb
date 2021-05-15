@@ -1,6 +1,7 @@
 class Auth0Controller < ApplicationController
 # import active record user 
 
+
   def callback
     # OmniAuth stores the informatin returned from Auth0 and the IdP in request.env['omniauth.auth'].
     # In this code, you will pull the raw_info supplied from the id_token and assign it to the session.
@@ -8,18 +9,19 @@ class Auth0Controller < ApplicationController
     auth_info = request.env['omniauth.auth']
     session[:userinfo] = auth_info['extra']['raw_info']
 
-    auth_id = session[:userinfo]['sub']
   
     # Redirect to the URL you want after successful auth
     redirect_to '/dashboard'
 
-    # User.find_by_auth0_id(auth_id)
 
-    # if User.find_by_auth0_id(auth_id) === nill 
-    #   User.create({auth0_id: auth_id})
-    # else 
-    #   internal_current_user = User.find_by_auth0_id(auth_id)
-    # end
+    if find_user_by_auth_id
+      @internal_user = find_user_by_auth_id
+      print @user
+    else 
+      print 'create a new user'
+     auth_id = session[:userinfo]['sub']
+    @internal_user = User.create({auth0_id: auth_id, name: session[:userinfo]['name'] })
+    end
   end
 
   def failure
@@ -44,6 +46,11 @@ class Auth0Controller < ApplicationController
 
   def to_query(hash)
     hash.map { |k, v| "#{k}=#{CGI.escape(v)}" unless v.nil? }.reject(&:nil?).join('&')
+  end
+
+  def find_user_by_auth_id 
+        auth_id = session[:userinfo]['sub']
+        User.find_by_auth0_id(auth_id)
   end
 
 end

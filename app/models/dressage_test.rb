@@ -1,16 +1,22 @@
 class DressageTest < ApplicationRecord
   has_many :moves, dependent: :destroy
   has_many :links, dependent: :destroy
+  has_many :test_links, dependent: :destroy
+
+  # belongs_to :user
+  has_many :favourites, dependent: :destroy
+  has_many :users, through: :favourites
+  # has_many :favouriters, through: :favourites, source: :users
+
+  
 
   accepts_nested_attributes_for :moves
   accepts_nested_attributes_for :links
+  accepts_nested_attributes_for :test_links
 
-   include AlgoliaSearch
 
-  algoliasearch   index_name: "dev_DRESSAGE" do
-        attributes :name, :org_name, :level, :current
-    # Use all default configuration
-  end
+  validates_presence_of :name, :level, :org_name
+
 
   def self.order_by_level 
   DressageTest.order(
