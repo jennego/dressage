@@ -20,7 +20,7 @@ class Auth0Controller < ApplicationController
     else 
       print 'create a new user'
      auth_id = session[:userinfo]['sub']
-    @internal_user = User.create({auth0_id: auth_id, email: session[:userinfo]['name'] })
+    @internal_user = User.create({auth0_id: auth_id, name: session[:userinfo]['name'] })
     end
   end
 
