@@ -1,7 +1,7 @@
 class DressageTestsController < SecuredController
 
-    # before_action :admin_logged_in_using_omniauth?
-    # skip_before_action :admin_logged_in_using_omniauth?, only: [:index, :show]
+    before_action :admin_logged_in_using_omniauth?
+    skip_before_action :admin_logged_in_using_omniauth?, only: [:index, :show]
 
 def index
    @dressage_tests = DressageTest.order_by_level
@@ -41,6 +41,8 @@ end
 
 def show
   find_test
+  @favourite = @dressage_test.favourites.find_by_user_id find_user_by_auth0_id
+
 end
 
 

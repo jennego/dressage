@@ -57,6 +57,7 @@ gem "algoliasearch-rails"
 gem 'omniauth-auth0'
 gem 'omniauth-rails_csrf_protection'
 gem "auto_increment"
+gem "font-awesome-rails"
 
 
 

@@ -1,7 +1,6 @@
 class Favourite < ApplicationRecord
-  has_many :dressage_tests, dependent: :destroy
-  belongs_to :user, foreign_key: "user_id"
+  belongs_to :user
+  belongs_to :dressage_test
 
-  accepts_nested_attributes_for :dressage_tests
-
+  validates_presence_of :user_id, :dressage_test_id
 end
