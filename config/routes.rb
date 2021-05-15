@@ -18,7 +18,10 @@ resources :dashboard, only: [:show, :index]
 
 namespace :api, defaults: { format: :json } do
     namespace :v1 do
-      resources :dressage_tests, only: [:index, :show, :create, :update, :destroy]
+      get '/favourites', to: 'favourites#index' 
+      resources :dressage_tests, only: [:index, :show, :create, :update, :destroy] do
+        resources :favourites, shallow: true, only: [:create, :destroy]  
+        end
       end
   end
 
