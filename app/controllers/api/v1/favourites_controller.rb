@@ -34,9 +34,9 @@ class Api::V1::FavouritesController < Api::BaseController
   end
 
   def index 
-    # @favourites = @user.favourites
-    # @test =  DressageTest
-    # render json: @favourites
+    @favourites = @user.favourites
+    @test =  DressageTest
+    render json: @favourites
   end
   
   def get_current_user
