@@ -1,16 +1,17 @@
-# app/lib/json_web_token.rb
 require 'net/http'
 require 'uri'
+
+# the auth0 domain for apis must include https AND the trailing slash
 
 class JsonWebToken
   def self.verify(token)
     JWT.decode(token, nil,
-               true, # Verify the signature of this token
-               algorithm: 'RS256',
-               iss: Rails.application.credentials.auth0[:api_domain],
-               verify_iss: true,
-               aud: Rails.application.credentials.auth0[:api_identifier],
-               verify_aud: true) do |header|
+              true, # Verify the signature of this token
+              algorithm: 'RS256',
+              iss: Rails.application.credentials.auth0[:api_domain],
+              verify_iss: true,
+              aud: Rails.application.credentials.auth0[:api_identifier],
+              verify_aud: true) do |header|
       jwks_hash[header['kid']]
     end
   end
