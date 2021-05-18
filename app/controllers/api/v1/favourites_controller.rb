@@ -1,6 +1,7 @@
 class Api::V1::FavouritesController < Api::BaseController
 
   include Secured
+  skip_before_action :authenticate_request!, only: [:index]
   before_action :get_current_user
   skip_before_action :verify_authenticity_token
 
