@@ -8,6 +8,7 @@ class DressageTest < ApplicationRecord
   has_many :users, through: :favourites
   # has_many :favouriters, through: :favourites, source: :users
 
+
   
 
   accepts_nested_attributes_for :moves
@@ -16,14 +17,14 @@ class DressageTest < ApplicationRecord
 
 
   validates_presence_of :name, :level, :org_name
-
-
+  
+  
   def self.order_by_level 
-  DressageTest.order(
-  Arel.sql(<<-SQL.squish
-      CASE 
-          WHEN level = 'Walk/Trot' THEN '1'
-          WHEN level = 'Intro' THEN '2'
+    DressageTest.order(
+      Arel.sql(<<-SQL.squish
+        CASE 
+        WHEN level = 'Walk/Trot' THEN '1'
+        WHEN level = 'Intro' THEN '2'
           WHEN level = 'Training' THEN '3'
           WHEN level = 'First' THEN '4'
           END ASC, name asc;
@@ -31,15 +32,15 @@ class DressageTest < ApplicationRecord
     )
   )
   end
-
-#   def shortname(name)
-# shortname = []
-# name.split(' ').each do |s|
-#    shortname.push(s[0])
-# end
-# return shortname.join()
-# end
-
+  
+  
+  def shortname(name)
+    shortname = []
+    name.split(' ').each do |s|
+      shortname.push(s[0])
+    end
+    return shortname.join()
+  end
 
 #   filterrific(
 #     default_filter_params: { sorted_by: 'level_desc' },

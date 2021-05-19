@@ -9,7 +9,7 @@ end
 json.dressage_tests @dressage_tests do |d|
   json.id d.id
   json.year d.year
-  json.orgname d.org_name
+  json.org_name d.org_name
   json.level d.level
   json.name d.name
   json.subtitle d.subtitle 
