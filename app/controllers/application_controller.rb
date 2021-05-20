@@ -20,8 +20,10 @@ def current_user
 end
 
   def find_user_by_auth0_id 
+    if user_logged_in?
         auth_id = session[:userinfo]['sub']
         return User.find_by_auth0_id(auth_id)
+    end
   end
 
 

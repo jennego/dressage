@@ -48,9 +48,4 @@ class Auth0Controller < ApplicationController
     hash.map { |k, v| "#{k}=#{CGI.escape(v)}" unless v.nil? }.reject(&:nil?).join('&')
   end
 
-  def find_user_by_auth_id 
-        auth_id = session[:userinfo]['sub']
-        User.find_by_auth0_id(auth_id)
-  end
-
 end

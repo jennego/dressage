@@ -37,10 +37,10 @@
         <ul class="navbar-nav">
 
           <% if user_logged_in?  %>
-          <li> <%= button_to 'Logout', 'auth/logout', method: :get,  class: "btn btn-danger"  %>
+          <li> <%= button_to 'Logout',  auth_logout_path, method: :get,  class: "btn btn-danger"  %>
           </li>
           <% else %>
-          <li> <%= button_to 'Login', 'auth/auth0', method: :post,  class: "btn btn-primary"  %> </li>
+          <li> <%= button_to 'Login', authentication_path, method: :post,  class: "btn btn-primary"  %> </li>
           <% end %>
 
         </ul>

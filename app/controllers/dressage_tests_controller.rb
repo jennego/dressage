@@ -41,7 +41,9 @@ end
 
 def show
   find_test
+  if user_logged_in? 
   @favourite = @dressage_test.favourites.find_by_user_id find_user_by_auth0_id
+  end
 
 end
 
