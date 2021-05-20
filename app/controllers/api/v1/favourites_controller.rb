@@ -48,4 +48,13 @@ class Api::V1::FavouritesController < Api::BaseController
     @user.favourites.any? {|f| f['dressage_test_id'] == id}
   end
 
+  def find_api_user_by_auth0_id(auth_id)  
+        if User.find_by_auth0_id(auth_id).present?
+            User.find_by_auth0_id(auth_id)
+        else  
+            User.create({auth0_id: auth_id})
+        end
+  end
+  
+
 end
