@@ -8,9 +8,6 @@ class DressageTest < ApplicationRecord
   has_many :users, through: :favourites
   # has_many :favouriters, through: :favourites, source: :users
 
-
-  
-
   accepts_nested_attributes_for :moves
   accepts_nested_attributes_for :links
   accepts_nested_attributes_for :test_links
@@ -33,14 +30,6 @@ class DressageTest < ApplicationRecord
   )
   end
   
-  
-  def shortname(name)
-    shortname = []
-    name.split(' ').each do |s|
-      shortname.push(s[0])
-    end
-    return shortname.join()
-  end
 
 #   filterrific(
 #     default_filter_params: { sorted_by: 'level_desc' },
