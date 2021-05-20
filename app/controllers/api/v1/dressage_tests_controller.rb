@@ -11,10 +11,12 @@ class Api::V1::DressageTestsController < Api::BaseController
 
   def show
     @test = DressageTest.find params[:id]
+
+    if params[:user].present? 
     auth0_id = params[:user]
     @user = find_api_user_by_auth0_id(auth0_id)
     @favourites =  @test.favourites.find_by_user_id @user
-
+    end
     
 
     # Because we installed ActiveModel Serializer then the default behaviour is
