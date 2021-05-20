@@ -14,8 +14,8 @@ class Auth0Controller < ApplicationController
     redirect_to '/dashboard'
 
 
-    if find_user_by_auth_id
-      @internal_user = find_user_by_auth_id
+    if find_user_by_auth0_id
+      @internal_user = find_user_by_auth0_id
       print @user
     else 
       print 'create a new user'
