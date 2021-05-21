@@ -1,7 +1,7 @@
 class DressageTest < ApplicationRecord
   has_many :moves, dependent: :destroy
   has_many :links, dependent: :destroy
-  has_many :test_links, dependent: :destroy
+  has_many :download_links, dependent: :destroy
 
   # belongs_to :user
   has_many :favourites, dependent: :destroy
@@ -10,7 +10,7 @@ class DressageTest < ApplicationRecord
 
   accepts_nested_attributes_for :moves
   accepts_nested_attributes_for :links
-  accepts_nested_attributes_for :test_links
+  accepts_nested_attributes_for :download_links
 
 
   validates_presence_of :name, :level, :org_name

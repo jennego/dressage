@@ -49,7 +49,7 @@ end
 
 
 def test_params
-  params.require(:dressage_test).permit(:notes, :name, :org_name, :level, :year, :subtitle, moves_attributes: [:id, :letter, :move, :_destroy], links_attributes: [:id, :url, :linkname, :_destroy], test_links_attributes: [:id, :url, :name, :_destroy])
+  params.require(:dressage_test).permit(:notes, :name, :org_name, :level, :year, :subtitle, moves_attributes: [:id, :letter, :move, :_destroy], links_attributes: [:id, :url, :linkname, :_destroy], download_links_attributes: [:id, :url, :name, :_destroy])
 end
 
   def find_test
